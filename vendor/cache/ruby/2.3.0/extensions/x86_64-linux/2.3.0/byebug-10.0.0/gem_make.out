@@ -1,0 +1,19 @@
+current directory: /portfolio/vendor/cache/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+/usr/local/bin/ruby -r ./siteconf20180311-1-1isnedh.rb extconf.rb
+creating Makefile
+
+current directory: /portfolio/vendor/cache/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /portfolio/vendor/cache/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR="
+compiling locker.c
+compiling byebug.c
+compiling context.c
+compiling breakpoint.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /portfolio/vendor/cache/ruby/2.3.0/gems/byebug-10.0.0/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20180311-1-1w81h2j/byebug

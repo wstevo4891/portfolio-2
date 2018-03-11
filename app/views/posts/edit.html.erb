@@ -1,0 +1,18 @@
+<!-- app/views/posts/edit.html.erb -->
+
+<div class="container mt-4 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <%= link_to 'Show', @post, class: 'btn btn-sm btn-outline-info' %> |
+      <%= link_to 'Back to List', posts_path, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+
+  <h1 class="text-center mt-4 mb-4">Editing Blog post</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <%= render 'form', post: @post %>
+    </div>
+  </div>
+</div>

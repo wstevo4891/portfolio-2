@@ -1,0 +1,262 @@
+/* PROJECT LINK ANIMATIONS
+===============================================*/
+
+// div and hover animation general settings ########
+
+.p-item {
+  display: inline-block;
+  margin: 3em auto;
+  border: solid 1px #4d4d4d;
+  overflow: hidden;
+  height: 15em;
+  width: 20em;
+  transition: all 1.5s ease;
+  box-shadow: 10px 10px 5px #888888;
+
+  img {
+    transition: all 1.5s ease;
+    height: 15em;
+    width: 20em;
+  }
+}
+
+.focus:hover {
+  border: 20px solid #000;
+  border-radius: 50%;
+  transform: rotate(0.1deg);
+  img {
+    transform: scale(2);
+  }
+}
+
+
+// Bolt Network animation ########
+
+.cover {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#bolt-svg {
+  width: 4em;
+  height: auto;
+  position: absolute;
+  top: 3.47%;
+  left: 3%;
+  opacity: 0;
+  transform-origin: -28%, -310%;
+}
+
+.p-bolt {
+  @extend .p-item;
+  border-color: $azure-radiance;
+  background-color: #000;
+
+  img {
+    transform-origin: -3%, -5%;
+  }
+}
+
+.focus-bolt:hover {
+  border: 20px solid $azure-radiance;
+  border-radius: 50%;
+  transform: rotateX(0.1deg);
+  img {
+    transform: scale(3), rotate(0.1deg);
+  }
+  #bolt-svg {
+    opacity: 1;
+  }
+}
+
+#pirate-pic:hover {
+  opacity: 0;
+}
+
+
+// Griffen Financial animation #########
+
+.p-griffen {
+  @extend .p-item;
+  transform: rotateX(0.1deg);
+  z-index: 1;
+
+  img {
+    transform-origin: center, -8%;
+  }
+}
+
+.focus-g:hover {
+  @extend .focus:hover;
+  img {
+    transform: scale(2.5, 2);
+  }
+}
+
+
+// Baldwin Interiors animation ########
+
+.p-baldwin {
+  @extend .p-item;
+  background-color: #fff;
+
+  img {
+    transform-origin: -3%, -1%;
+  }
+}
+
+.focus-baldwin:hover {
+  @extend .focus, :hover;
+
+  img {
+    transform: scale(3.5, 3);
+  }
+}
+
+// SUGGESTION BOX ANIMATION #################
+
+.p-suggestion {
+  @extend .p-item;
+  transition: all 0.5s ease;
+  border-color: #6EBFD4;
+
+  img {
+    transition: all 0.5s ease;
+    transform-origin: 11%, 6%;
+  }
+}
+
+.focus-sugg:hover {
+  width: 17em;
+  border-width: 10px;
+  border-radius: 50%;
+  transform: rotateZ(360deg);
+
+  img {
+    transform: scale(5, 4);
+  }
+}
+
+// Sherry Matthews Marketing animation
+.p-smm {
+  border-color: $lime-green;
+  @extend .p-item;
+  transition: all 2s ease;
+
+  img {
+    transition: all 2s ease;
+    transform-origin: 7%, 9%;
+  }
+}
+
+.focus-smm:hover {
+  border: 20px solid $lime-green;
+  border-radius: 50%;
+  transform: rotateZ(360deg);
+
+  img {
+    transform: scale(3.5, 3);
+  }
+}
+
+
+// MEDIA QUERIES ############################
+
+@media only screen and (min-width: 480px) {
+  .focus:hover, .focus-bolt:hover, .focus-smm:hover {
+    border-width: 40px;
+  }
+}
+
+.p-item {
+  @media only screen and (min-width: 480px) and (max-width: 1199px) {
+    height: 20em;
+    width: 30em;
+  }
+  @media only screen and (min-width: 1200px) {
+    height: 25em;
+    width: 35em;
+  }
+  img {
+    @media only screen and (min-width: 480px) and (max-width: 1199px) {
+      height: 20em;
+      width: 35em;
+    }
+    @media only screen and (min-width: 1200px) {
+      height: 25em;
+      width: 40em;
+    }
+  }
+}
+
+// Bolt Network ####
+
+.p-bolt {
+  @media screen and (min-width: 480px) {
+    img {
+      transform-origin: -3%, -8%;
+    }
+  }
+}
+
+#bolt-svg {
+  @media screen and (min-width: 480px) {
+    width: 7em;
+    transform-origin: -7%, -190%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 8.55em;
+  }
+}
+
+
+// Griffen Financial ####
+
+.p-griffen {
+  img {
+    @media screen and (min-width: 480px) {
+      transform-origin: center, -2%;
+    }
+  }
+}
+
+// Baldwin Interiors ####
+
+.p-baldwin {
+  @media screen and (min-width: 480px) {
+    img {
+      transform-origin: -3.5%, top;
+    }
+  }
+}
+
+// SUGGESTION BOX ####
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .focus-sugg:hover {
+    width: 20em;
+  }
+
+  .p-suggestion img {
+    transform-origin: 11% 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .focus-sugg:hover {
+    width: 28em;
+    border-width: 20px;
+  }
+}
+
+// SMM ####
+
+.p-smm {
+  @media screen and (min-width: 480px) {
+    img {
+      transform-origin: 7%, 8%;
+    }
+  }
+}

@@ -1,0 +1,94 @@
+/* JUMBOTRON BANNERS
+==========================================*/
+
+.jumbotron-main {
+  @extend .jumbotron;
+  background: image-url("rainier-enhanced.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  height: 25em;
+  color: white;
+  h1 {
+    max-width: 10em;
+    margin: 0 auto;
+    top: 1em;
+    position: relative;
+    text-shadow: 2px 2px 4px #000;
+  }
+}
+
+.jumbotron-small {
+  background: image-url("macbook-coffee-color.jpg") no-repeat center center fixed;
+  height: 20em;
+  background-size: cover;
+  color: white;
+  h1 {
+    position: relative;
+    top: 3em;
+    text-shadow: 2px 2px 4px #000;
+  }
+}
+
+.jumbotron-contact {
+  @extend .jumbotron-small;
+  background: image-url("lake-union.jpg") no-repeat center;
+  background-size: 1280px 100%;
+  h1 {
+    max-width: 10em;
+    margin: 0 auto;
+  }
+}
+
+.jumbotron-about {
+  @extend .jumbotron-small;
+  background: image-url("atacama-enhanced.jpg") no-repeat center center;
+  height: 25em;
+  h1 {
+    top: 0.5em;
+  }
+}
+
+.main {
+  a {
+  width: 10em;
+  height: 5em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2em;
+  position: relative;
+  top: 2.5em;
+  }
+}
+
+
+// MEDIA QUERIES #################
+
+.jumbotron-main {
+  @media only screen and (min-width: 768px) {
+    height: 45em;
+  }
+  h1 {
+    @media only screen and (min-width: 768px) {
+      top: 2.5em;
+      width: auto;
+    }
+  }
+}
+
+.jumbotron-contact, .jumbotron-small {
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 6em;
+    }
+  }
+}
+
+.jumbotron-small {
+  @media screen and (min-width: 1024px) {
+    h1 {
+      top: 0.8em;
+    }
+  }
+}

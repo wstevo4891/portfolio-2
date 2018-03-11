@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio of Eric Stephenson</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'shared/navbar' %>
+
+    <% if notice.present? %>
+      <p class="row info"><%= notice %></p>
+    <% elsif alert.present? %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+
+    <main>
+      <%= yield :form_errors %>
+      <%= yield %>
+    </main>
+
+    <%= render 'shared/footer' %>
+  </body>
+</html>

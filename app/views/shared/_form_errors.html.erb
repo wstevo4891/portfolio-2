@@ -1,0 +1,23 @@
+<!-- app/views/shared/_form_errors.html.erb -->
+
+<% content_for :form_errors do %>
+  <% unless object.errors.empty? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(object.errors.count, "error") %> prevented this form from processing:
+      </h2>
+
+      <ul>
+        <% object.errors.each do |key, value| %>
+          <% key = key.to_s %>
+          <% if key.include?('_') %>
+            <% key = key.split('_').each { |x| x.capitalize! }.join(' ') %>
+          <% else %>
+            <% key.capitalize! %>
+          <% end %>
+          <li><b><%= key %>:</b>&nbsp;&nbsp;<%= value %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<% end %>

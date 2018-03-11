@@ -1,0 +1,21 @@
+/* ADMIN DASHBOARD
+===============================*/
+
+#dash-nav-container {
+  position: fixed;
+}
+
+#dash-nav {
+  margin: 1em;
+}
+
+#dash-nav a {
+  color: #222;
+  &:hover {
+    color: #18bc9c;
+  }
+}
+
+.dashboard-view {
+  margin-bottom: 4em;
+}

@@ -1,0 +1,108 @@
+// app/assets/stylesheets/layouts/_navbar.scss
+
+// ===================
+//    NAVBAR STYLES
+// ===================
+
+// nav.navbar {
+//   margin: 0;
+//   padding: 0.8em;
+//   background-color: #222;
+//   z-index: 10;
+//
+//   button {
+//     border: solid 1px #F8F8F8;
+//   }
+//
+//   .icon-bar {
+//     background-color: #F8F8F8;
+//   }
+// }
+//
+// nav.navbar, .navbar-header, .nav {
+//   @include transition(all 1s ease);
+// }
+//
+// nav.navbar.shrink {
+//   @include transform(translate(0, -28px));
+//
+//   .navbar-header {
+//     @include transform(translate(0, 15px));
+//   }
+//
+//   .nav {
+//     @include transform(translate(0, 15px));
+//   }
+// }
+//
+// #logo {
+//   font-size: 2em;
+// }
+//
+// #logo, .nav a {
+//   color: #F8F8F8;
+//   @include transition(all 0.5s ease);
+//   &:hover {
+//     color: #00A676;
+//   }
+// }
+//
+// .nav {
+//   a {
+//     font-size: 1.5em;
+//   }
+//
+//   i {
+//     font-size: 2em;
+//     margin-top: -0.25em;
+//   }
+// }
+//
+// #nav-list {
+//   margin-top: 0.6em;
+//   a:hover {
+//     background-color: #222;
+//   }
+//
+//   .icon-link {
+//     a {
+//       height: 50px;
+//       margin-bottom: 0.5em;
+//     }
+//   }
+// }
+
+// ===================
+//    MEDIA QUERIES
+// ===================
+
+// #logo {
+//   @media only screen and (min-width: 768px) {
+//     position: relative;
+//     top: 0.2em;
+//   }
+// }
+//
+// .nav {
+//   a {
+//     @media only screen and (min-width: 768px) and (max-width: 1023px) {
+//       font-size: 1.2em;
+//     }
+//     @media only screen and (max-width: 768px) {
+//       height: 50px;
+//       width: 95%;
+//       margin: 0 auto;
+//     }
+//   }
+//   li {
+//     @media only screen and (max-width: 768px) {
+//       padding-top: 0.5em;
+//     }
+//   }
+// }
+//
+// .mobile-nav-break {
+//   @media only screen and (max-width: 767px) {
+//     border-bottom: 0.05em solid white;
+//   }
+// }

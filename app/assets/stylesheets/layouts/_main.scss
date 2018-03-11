@@ -1,0 +1,27 @@
+/* SITE-WIDE STYLES
+===============================*/
+
+// * {
+//   @include box-sizing(border-box);
+// }
+
+body {
+  line-height: 180%;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+main {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.page-headline {
+  margin-top: 2em;
+  font-weight: 300;
+}
+
+.technologies {
+  font-family: 'Cambria';
+  color: #696969;
+}

@@ -1,0 +1,289 @@
+/* WELCOME PAGE STYLES
+===================================*/
+
+.skills-box {
+  position: relative;
+}
+
+.skillset {
+  position: relative;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+  height: 475px;
+  transition: all 0.5s ease;
+
+  h1 {
+    margin: 0;
+    padding: 1.5em 0 1em;
+    font-weight: 300;
+  }
+}
+
+.skillset-default {
+  background: image-url("macbook-coffee-bw.jpg") no-repeat center center;
+}
+
+.skillset-ror {
+  background: image-url("fast-train.gif") no-repeat center center;
+  background-size: cover;
+}
+
+.skillset-deep {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.skills {
+  p, a {
+    color: white;
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    transition: all 0.5s ease;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.ruby-skill {
+  left: 14%;
+
+  &:hover {
+    transform: scale(1.5);
+    color: red;
+  }
+}
+
+.ruby-title {
+  top: 10px;
+  left: 10px;
+  color: red !important;
+}
+
+.ruby-gif {
+  display: none;
+  position: absolute;
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+.javascript-skill {
+  left: 50%;
+  width: 17%;
+  margin-left: -8.5%;
+  &:hover {
+    color: yellow;
+    transform: scale(1.5);
+  }
+}
+
+.javascript-title {
+  top: 10px;
+  left: 10px;
+  color: yellow !important;
+}
+
+.ror-skill {
+  right: 8%;
+
+  &:hover {
+    color: red;
+    transform: scale(1.5);
+  }
+}
+
+.ror-title {
+  top: 10px;
+  left: 10px;
+  color: red !important;
+}
+
+.bootstrap-skill {
+  position: absolute;
+  top: 16em;
+  left: 12%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 5;
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: -3px;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    li {
+      height: 4em;
+      margin: 0;
+      padding: 5px;
+      border-right: solid 1px white;
+    }
+  }
+}
+
+.bootstrap-title {
+  position: absolute;
+  top: 15px;
+  left: 43px;
+  margin: 0;
+  padding: 0;
+  color: #5a4080 !important;
+  text-shadow:
+   -1px -1px 1px #F8F8F8,
+    1px -1px 1px #F8F8F8,
+    -1px 1px 1px #F8F8F8,
+     1px 1px 1px #F8F8F8;
+  z-index: 5;
+  transition: all 0.5s ease;
+  transform: scale(1.5);
+
+  li {
+    display: inline;
+    list-style-type: none;
+    margin: -3px;
+    font-weight: 600;
+  }
+}
+
+.jquery-skill {
+  top: 16em;
+  left: 50%;
+  width: 12%;
+  margin-left: -6%;
+}
+
+.jquery-5 {
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: lightskyblue;
+  }
+}
+
+.jquery-fine {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  color: white !important;
+}
+
+.jquery-title {
+  top: 10px;
+  left: 10px;
+  color: lightskyblue !important;
+}
+
+.css3-skill {
+  top: 16em;
+  right: 14%;
+  transition: all 0.1s ease;
+
+  &:hover {
+    transform: translateX(-150px) rotateZ(-750deg) scale(12.5);
+    color: #29a9df;
+    z-index: 5;
+  }
+}
+
+.css-title {
+  top: 10px;
+  left: 10px;
+  color: #29a9df !important;
+}
+
+.skills-back {
+  display: none;
+  position: absolute;
+  top: 2.5em;
+  left: 2px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.skills-back:hover .flipper, .skills-back.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.skills-back, .front, .back {
+  width: 3em;
+  height: 34px;
+}
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 6;
+  transform: rotateY(0deg);
+}
+
+.back {
+  z-index: 5;
+  transform: rotateY(180deg);
+}
+
+.exhibit {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 30%;
+  height: 475px;
+  background-color: #333;
+  transition: all 0.5s ease;
+}
+
+/* MEDIA QUERIES
+===================================*/
+
+@media screen and (min-width: 480px) {
+  .skills-copy {
+    font-size: 1.3em;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .skills-copy {
+    font-size: 24px;
+  }
+
+  .bootstrap-skill, .jquery-skill, .css3-skill {
+    top: 12em;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .ruby-skill {
+    left: 22%;
+  }
+
+  .ror-skill {
+    right: 15%;
+  }
+
+  .bootstrap-skill {
+    left: 20%;
+  }
+
+  .css3-skill {
+    right: 19%;
+  }
+}

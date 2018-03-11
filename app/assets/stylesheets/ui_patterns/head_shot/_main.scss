@@ -1,0 +1,13 @@
+// Head Shot Component
+
+.headshot {
+  background: image-url("headshot1-thumb.jpg") center;
+  height: 14em;
+  width: 14em;
+  position: absolute;
+  top: 8em;
+  left: 3em;
+  border: solid 6px #333;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px #4D4D4D;
+}

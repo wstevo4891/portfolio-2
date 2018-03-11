@@ -1,0 +1,42 @@
+/* ABOUT PAGE STYLES */
+
+.about-copy {
+  margin: 2em auto;
+  color: #4d4d4d;
+  text-align: justify;
+  font-size: 18px;
+  width: 90%;
+
+  h1 {
+    margin-bottom: 1.5em;
+    color: #333;
+  }
+
+  h2 {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  img {
+    @include box-shadow(10px 10px 5px #888888);
+  }
+}
+
+#about-last {
+  margin-bottom: 4em;
+}
+
+// MEDIA QUERIES #######
+
+.about-copy {
+  @media only screen and (min-width: 990px) {
+    width: 60%;
+  }
+}
