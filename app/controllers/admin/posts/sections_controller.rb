@@ -7,7 +7,8 @@ module Admin
       # GET /post/1/sections
       # GET /post/1/sections.json
       def index
-        @post_sections = find_post.sections
+        @post = find_post
+        @post_sections = @post.sections
       end
 
       # GET /post/1/sections/1
@@ -17,7 +18,8 @@ module Admin
 
       # GET /post/1/sections/new
       def new
-        @post_section = find_post.sections.build
+        @post = find_post
+        @post_section = @post.sections.build
       end
 
       # GET /post/1/sections/1/edit
@@ -31,8 +33,8 @@ module Admin
 
         respond_to do |format|
           if @post_section.save
-            format.html { redirect_to admin_post_section_path(@post_section), notice: 'Section was successfully created.' }
-            format.json { render :show, status: :created, location: admin_post_section_path(@post_section) }
+            format.html { redirect_to admin_post_section_url(@post_section), notice: 'Section was successfully created.' }
+            format.json { render :show, status: :created, location: admin_post_section_url(@post_section) }
           else
             format.html { render :new }
             format.json { render json: @post_section.errors, status: :unprocessable_entity }
@@ -45,8 +47,8 @@ module Admin
       def update
         respond_to do |format|
           if @post_section.update(post_section_params)
-            format.html { redirect_to admin_post_section_path(@post_section), notice: 'Section was successfully updated.' }
-            format.json { render :show, status: :ok, location: admin_post_section_path(@post_section) }
+            format.html { redirect_to admin_post_section_url(@post_section), notice: 'Section was successfully updated.' }
+            format.json { render :show, status: :ok, location: admin_post_section_url(@post_section) }
           else
             format.html { render :edit }
             format.json { render json: @post_section.errors, status: :unprocessable_entity }
@@ -59,7 +61,7 @@ module Admin
       def destroy
         @post_section.destroy
         respond_to do |format|
-          format.html { redirect_to admin_post_sections_path(params[:post_id]), notice: 'Section was successfully destroyed.' }
+          format.html { redirect_to admin_post_sections_url(params[:post_id]), notice: 'Section was successfully destroyed.' }
           format.json { head :no_content }
         end
       end
@@ -68,7 +70,8 @@ module Admin
 
       # Use callbacks to share common setup or constraints between actions.
       def set_post_section
-        @post_section = find_post.sections.find(params[:id])
+        @post = find_post
+        @post_section = @post.sections.find(params[:id])
       end
 
       def find_post

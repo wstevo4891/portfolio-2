@@ -3,12 +3,14 @@
 <div class="container mt-4 mb-5">
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <%= link_to 'Show', @project_demo, class: 'btn btn-sm btn-outline-info' %> |
-      <%= link_to 'Back to List', project_demos_path, class: 'btn btn-secondary' %>
+      <%= link_to 'Show', admin_project_demo_path(@project_demo), class: 'btn btn-sm btn-outline-info' %> |
+      <%= link_to 'Back to List', admin_project_demos_path, class: 'btn btn-secondary' %>
     </div>
   </div>
 
-  <h1 class="text-center mt-4 mb-4">Editing Project demo</h1>
+  <h1 class="text-center mt-4 mb-4"><%= @project.title %></h1>
+
+  <h2 class="text-center mt-4 mb-4">Editing <%= @project_demo.name %></h2>
 
   <div class="row justify-content-center">
     <div class="col-lg-10">

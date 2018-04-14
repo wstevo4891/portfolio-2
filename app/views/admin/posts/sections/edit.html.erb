@@ -3,12 +3,14 @@
 <div class="container mt-4 mb-5">
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <%= link_to 'Show', @post_section, class: 'btn btn-sm btn-outline-info' %> |
-      <%= link_to 'Back to List', post_sections_path, class: 'btn btn-secondary' %>
+      <%= link_to 'Show', admin_post_section_path(@post_section), class: 'btn btn-sm btn-outline-info' %> |
+      <%= link_to 'Back to List', admin_post_sections_path(@post), class: 'btn btn-secondary' %>
     </div>
   </div>
 
-  <h1 class="text-center mt-4 mb-4">Editing Post section</h1>
+  <h1 class="text-center mt-4 mb-4"><%= @post.title %></h1>
+
+  <h2 class="text-center mt-4 mb-4">Editing <%= @post_section.header %></h2>
 
   <div class="row justify-content-center">
     <div class="col-lg-10">

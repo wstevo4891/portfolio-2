@@ -30,8 +30,8 @@ module Admin
 
       respond_to do |format|
         if @post.save
-          format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
-          format.json { render :show, status: :created, location: admin_post_path(@post) }
+          format.html { redirect_to admin_post_url(@post), notice: 'Post was successfully created.' }
+          format.json { render :show, status: :created, location: admin_post_url(@post) }
         else
           format.html { render :new }
           format.json { render json: @post.errors, status: :unprocessable_entity }
@@ -44,8 +44,8 @@ module Admin
     def update
       respond_to do |format|
         if @post.update(post_params)
-          format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully updated.' }
-          format.json { render :show, status: :ok, location: admin_post_path(@post) }
+          format.html { redirect_to admin_post_url(@post), notice: 'Post was successfully updated.' }
+          format.json { render :show, status: :ok, location: admin_post_url(@post) }
         else
           format.html { render :edit }
           format.json { render json: @post.errors, status: :unprocessable_entity }

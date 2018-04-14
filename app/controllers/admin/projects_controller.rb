@@ -30,8 +30,8 @@ module Admin
 
       respond_to do |format|
         if @project.save
-          format.html { redirect_to admin_project_path(@project), notice: 'Project was successfully created.' }
-          format.json { render :show, status: :created, location: admin_project_path(@project) }
+          format.html { redirect_to admin_project_url(@project), notice: 'Project was successfully created.' }
+          format.json { render :show, status: :created, location: admin_project_url(@project) }
         else
           format.html { render :new }
           format.json { render json: @project.errors, status: :unprocessable_entity }
@@ -44,8 +44,8 @@ module Admin
     def update
       respond_to do |format|
         if @project.update(project_params)
-          format.html { redirect_to admin_project_path(@project), notice: 'Project was successfully updated.' }
-          format.json { render :show, status: :ok, location: admin_project_path(@project) }
+          format.html { redirect_to admin_project_url(@project), notice: 'Project was successfully updated.' }
+          format.json { render :show, status: :ok, location: admin_project_url(@project) }
         else
           format.html { render :edit }
           format.json { render json: @project.errors, status: :unprocessable_entity }

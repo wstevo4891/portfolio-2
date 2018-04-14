@@ -9,7 +9,8 @@ module Admin
       # GET /projects/demos
       # GET /projects/demos.json
       def index
-        @project_demos = find_project.demos
+        @project = find_project
+        @project_demos = @project.demos
       end
 
       # GET /projects/demos/1
@@ -19,7 +20,8 @@ module Admin
 
       # GET /projects/demos/new
       def new
-        @project_demo = find_project.demos.build
+        @project = find_project
+        @project_demo = @project.demos.build
       end
 
       # GET /projects/demos/1/edit
@@ -33,8 +35,8 @@ module Admin
 
         respond_to do |format|
           if @project_demo.save
-            format.html { redirect_to admin_project_demo_path(@project_demo), notice: 'Project Demo was successfully created.' }
-            format.json { render :show, status: :created, location: admin_project_demo_path(@project_demo) }
+            format.html { redirect_to admin_project_demo_url(@project_demo), notice: 'Project Demo was successfully created.' }
+            format.json { render :show, status: :created, location: admin_project_demo_url(@project_demo) }
           else
             format.html { render :new }
             format.json { render json: @project_demo.errors, status: :unprocessable_entity }
@@ -47,8 +49,8 @@ module Admin
       def update
         respond_to do |format|
           if @project_demo.update(demo_params)
-            format.html { redirect_to admin_project_demo_path(@project_demo), notice: 'Project Demo was successfully updated.' }
-            format.json { render :show, status: :ok, location: admin_project_demo_path(@project_demo) }
+            format.html { redirect_to admin_project_demo_url(@project_demo), notice: 'Project Demo was successfully updated.' }
+            format.json { render :show, status: :ok, location: admin_project_demo_url(@project_demo) }
           else
             format.html { render :edit }
             format.json { render json: @project.errors, status: :unprocessable_entity }
@@ -61,7 +63,7 @@ module Admin
       def destroy
         @project_demo.destroy
         respond_to do |format|
-          format.html { redirect_to admin_project_demos_path(params[:project_id]), notice: 'Project Demo was successfully destroyed.' }
+          format.html { redirect_to admin_project_demos_url(params[:project_id]), notice: 'Project Demo was successfully destroyed.' }
           format.json { head :no_content }
         end
       end
@@ -70,7 +72,8 @@ module Admin
 
       # Use callbacks to share common setup or constraints between actions.
       def set_demo
-        @project_demo = find_project.demos.find(params[:id])
+        @project = find_project
+        @project_demo = @project.demos.find(params[:id])
       end
 
       def find_project

@@ -1,12 +1,12 @@
 <!-- app/views/project_demos/index.html.erb -->
 
 <div class="container">
-  <h1 class="text-center mt-4 mb-4">Project Demos</h1>
+  <h1 class="text-center mt-4 mb-4"><%= @project.title %> Demos</h1>
 
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Name</th>
         <th colspan="3">Actions</th>
       </tr>
     </thead>
@@ -14,10 +14,10 @@
     <tbody>
     <% @project_demos.each do |project_demo| %>
     <tr>
-      <th scope="row"><%= project_demo.id %></th>
-      <td><%= link_to 'Show', project_demo, class: 'btn btn-sm btn-outline-info' %></td>
-      <td><%= link_to 'Edit', edit_project_demo_path(project_demo), class: 'btn btn-sm btn-outline-success' %></td>
-      <td><%= link_to 'Delete', project_demo, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %></td>
+      <th scope="row"><%= project_demo.name %></th>
+      <td><%= link_to 'Show', admin_project_demo_path(project_demo), class: 'btn btn-sm btn-outline-info' %></td>
+      <td><%= link_to 'Edit', edit_admin_project_demo_path(project_demo), class: 'btn btn-sm btn-outline-success' %></td>
+      <td><%= link_to 'Delete', admin_project_demo_path(project_demo), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %></td>
     </tr>
     <% end %>
     </tbody>
@@ -25,5 +25,5 @@
 
   <br>
 
-  <%= link_to 'New Project demo', new_project_demo_path, class: 'btn btn-primary mt-4 mb-4' %>
+  <%= link_to 'New Project demo', new_admin_project_demo_path(@project), class: 'btn btn-primary mt-4 mb-4' %>
 </div>
