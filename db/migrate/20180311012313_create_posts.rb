@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.date     :date
       t.string   :cover
       t.text     :description
-      t.json     :images, array: true, default: []
+      t.string   :images, array: true, default: []
 
       t.timestamps
     end
