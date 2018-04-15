@@ -1,0 +1,78 @@
+---
+-
+  title: Bolt Network
+  slug: bolt-network
+  cover: bolt-network-cover.png
+  site_link: https://bolt-network-wstevo4891.herokuapp.com/
+  repo_link: https://github.com/wstevo4891/bolt-network
+  description: A Rails 4 app that mimics the UI of Netflix.
+  highlights:
+    - Fast-loading sliders with CSS 3 animations
+    - Admin record interface with AJAX
+  tech_stack:
+    - Ruby on Rails
+    - PostgreSQL
+    - Amazon S3
+    - jQuery
+    - HTML5
+    - CSS3
+    - SASS
+    - Bootstrap 3
+    - Heroku
+-
+  title: Griffen Financial
+  slug: griffen-financial
+  cover: griffen-financial-cover.png
+  site_link: https://dry-tor-4505.herokuapp.com/
+  repo_link: https://github.com/wstevo4891/griffen
+  description: A Rails 4 application using CarrierWave, Cocoon, Wicked_PDF,
+               Dropbox-SDK, and Ruby-Zoho for processing application forms.
+  highlights:
+    - Integration with Dropbox, Zoho CMS, and Mandrill
+    - Bootstrap forms with add-and-remove nested models
+  tech_stack:
+    - Ruby on Rails
+    - PostgreSQL
+    - jQuery
+    - HTML5
+    - SASS
+    - Bootstrap 3
+    - Ruby APIs
+    - Heroku
+-
+  title: At Home with Baldwin Interiors
+  slug: baldwin-interiors
+  cover: baldwin-cover.png
+  site_link: https://vast-reef-1675.herokuapp.com/
+  repo_link: https://github.com/wstevo4891/atbaldwin
+  description: A Rails 4 e-commerce website using the Spree engine.
+  highlights:
+    - Customized Spree application
+    - Google Maps embed in footer
+  tech_stack:
+    - Ruby on Rails
+    - PostgreSQL
+    - Spree Engine
+    - Google Maps API
+    - jQuery
+    - HTML5
+    - SASS
+    - Bootstrap 3
+    - Heroku
+-
+  title: Suggestion Box
+  slug: suggestion-box
+  cover: suggestion-box-cover.png
+  site_link: https://suggestion-box-mean.herokuapp.com/
+  repo_link: https://github.com/wstevo4891/suggestion_box_mean
+  description: Suggestion Box is a tool for co-workers to make anonymous
+               suggestions for improving their work space, meetings, etc.
+  highlights:
+    - Customized Spree application
+    - Google Maps embed in footer
+  tech_stack:
+    - AngularJS
+    - NodeJS
+    - ExpressJS
+    - MongoDB
+    - Heroku

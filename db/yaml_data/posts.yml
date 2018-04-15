@@ -1,13 +1,51 @@
 ---
 -
   title: PDF Uploads with Dropbox API
+  slug: pdf-uploads-with-dropbox-api
   cover: dropbox-api.png
-  date: 04-26-2016
+  date:
+    - 2016
+    - 04
+    - 26
+  description: My first Rails project was centered around some large
+               application forms and the client wanted finished copies uploaded
+               to his Dropbox account. Using Dropbox-SDK along with Wicked PDF
+               and WKHTMLTOPDF, I was able to make this happen. First, I made a
+               Dropbox app on the client's account for receiving files, then I
+               installed the gems and pasted the app's secret keys in the
+               Dropbox initializer. In the form's controller, I used Wicked PDF
+               to make PDF copies of saved forms and the Dropbox API to upload
+               them to the client's Dropbox app.
 -
   title: A Fully Ajaxified Index Table
+  slug: fully-ajaxified-index-table
   cover: ajax-blue.jpg
-  date: 04-28-2016
+  date:
+    - 2016
+    - 04
+    - 28
+  description: My on-going side project to recreate Netflix's front end, Bolt
+               Network, has some nifty do-dads, one being that all CRUD actions
+               in the Genres index are executed with AJAX. If you're not
+               familiar, AJAX stands for "Asynchronous JavaScript and XML." In
+               human-speak, that means you can click on things that interact
+               with the server without having to navigate somewhere or refresh
+               the web page. In *Agile Web Development with Rails 4*, Sam Ruby
+               says AJAX is for "making browsers suck less." Long before...
 -
   title: Live-reloading with Guard LiveReload
+  slug: live-reloading-with-guard-live-reload
   cover: livereload-with-rails-4.jpg
-  date: 04-28-2016
+  date:
+    - 2016
+    - 04
+    - 28
+  description: After building some demo apps in Angular and being amazed by the
+               live reloading feature of Grunt and Gulp, I desperately wanted
+               to do this in Rails development. Two articles, multiple Github
+               docs, and several hours of trial and error later, I got the damn
+               thing to work! It's a somewhat tricky setup and requires an
+               additional console window to the one running your rails server,
+               but the fact that I will never again have to wait 30 - 50
+               seconds to see the changes to my CSS3 animations puts a big
+               stupid grin on my face.

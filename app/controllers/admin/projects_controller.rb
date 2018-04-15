@@ -75,7 +75,7 @@ module Admin
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project)
-            .permit :title, :cover, :skills, :site_link, :repo_link,
+            .permit :title, :slug, :cover, :site_link, :repo_link,
                     :description, :highlights, :tech_stack, :images
     end
   end

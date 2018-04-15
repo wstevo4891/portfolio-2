@@ -2,89 +2,10 @@
 
 <!-- HOME PAGE -->
 
-<div class="jumbotron-main">
-  <div class="container-fluid">
-    <div class="headshot hidden-xs hidden-sm"></div>
-    <div class="main col-md-8 col-md-offset-2 text-center">
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-8 text-center top-20-pct">
       <h1>Eric Stephenson is a Web Developer</br> in Seattle</h1>
     </div>
   </div>
-</div>
-
-<div class="project-page">
-  <div class="container">
-    <h1 class="page-headline">Recent Projects</h1>
-
-    <div class="row">
-      <div class="col-md-6">
-        <div class="p-bolt focus-bolt">
-          <a href="/work/bolt_network">
-            <div class="cover">
-              <%#= image_tag("bolt-network.svg", class: "img-responsive", id: "bolt-svg") %>
-              <%#= image_tag("bolt-network-home.png", class: "img-responsive", id: "pirate-pic") %>
-            </div>
-          </a>
-        </div>
-        <h3>Bolt Network</h3>
-      </div>
-
-      <div class="col-md-6">
-        <div class="p-griffen focus-g">
-          <a href="/work/griffen">
-            <%#= image_tag("griffen.png", class: "img-responsive") %>
-          </a>
-        </div>
-        <h3>Griffen Financial</h3>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skillset skillset-default">
-    <h1>Skills</h1>
-    <br>
-    <span class="ruby-gif"><%#= image_tag("rotating-ruby.gif", class: "img-responsive") %></span>
-    <div class="skills-copy">
-
-      <div class="skills">
-  	    <p class="ruby-skill">Ruby</p>
-        <p class="javascript-skill">JavaScript</p>
-        <p class="ror-skill">Ruby on Rails</p>
-        <!-- <p class="node-skill">NodeJS</p> -->
-        <!-- <p class="angular-skill">AngularJS</p> -->
-        <ul class="bootstrap-skill">
-          <li>Boo</li>
-          <li>ts</li>
-          <li>trap</li>
-        </ul>
-        <p class="jquery-skill jquery-1">jQuery<span class="jquery-fine">Fine, click me!</span></p>
-        <p class="css3-skill">CSS3</p>
-        <div class="skills-back">
-          <div class="flipper">
-            <div class="front"><span>Back</span></div>
-            <div class="back"><i class="fa fa-arrow-left"></i></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="exhibit ruby-exhibit">
-    <%= render 'ruby_exhibit' %>
-  </div>
-
-  <div class="exhibit javascript-exhibit">
-
-  </div>
-
-  <div class="exhibit ror-exhibit">
-
-  </div>
-
-  <div class="exhibit bootstrap-exhibit"></div>
-
-  <div class="exhibit jquery-exhibit"></div>
-
-  <div class="exhibit css-exhibit"></div>
 </div>

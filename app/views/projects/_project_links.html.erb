@@ -1,0 +1,11 @@
+<!-- app/views/projects/_project_links.html.erb -->
+
+<% @projects.each do |project| %>
+  <div class="col-sm-6">
+    <div class="project-link">
+      <a href="/projects/<%= project.slug %>">
+        <div style="background-image: url(<%=  project.cover %>)"></div>
+      </a>
+    </div>
+  </div>
+<% end %>

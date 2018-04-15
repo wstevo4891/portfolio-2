@@ -4,6 +4,17 @@
 //    NAVBAR STYLES
 // ===================
 
+.navbar-collapse {
+  @media screen and (max-width: 767px) {
+    background-color: rgb(52, 58, 64);
+    position: absolute;
+    top: 5rem;
+    left: 0px;
+    width: 100%;
+    padding: 0px 1rem;
+  }
+}
+
 // nav.navbar {
 //   margin: 0;
 //   padding: 0.8em;

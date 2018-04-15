@@ -88,7 +88,7 @@
 }
 
 .focus-g:hover {
-  @extend .focus:hover;
+  @extend .focus, :hover;
   img {
     transform: scale(2.5, 2);
   }

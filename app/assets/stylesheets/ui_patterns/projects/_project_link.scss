@@ -1,0 +1,14 @@
+// Project Link Component
+
+.project-link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  a div {
+    padding-top: 63%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    box-shadow: 0 0 50px rgba(0,0,0,.6) inset;
+  }
+}

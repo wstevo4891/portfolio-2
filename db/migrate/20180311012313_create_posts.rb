@@ -6,7 +6,6 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.date     :date
       t.string   :cover
       t.text     :description
-      t.string   :images, array: true, default: []
 
       t.timestamps
     end
@@ -14,8 +13,10 @@ class CreatePosts < ActiveRecord::Migration[5.1]
     create_table :post_sections do |t|
       t.belongs_to :post, index: true
       t.string     :header
-      t.string     :image
+      t.string     :images, array: true, default: []
       t.text       :body
+
+      t.timestamps
     end
   end
 end
