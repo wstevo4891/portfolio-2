@@ -3,6 +3,8 @@ module Admin
   class PostsController < ApplicationController
     before_action :set_post, only: %i[show edit update destroy]
 
+    layout 'admin'
+
     # GET /posts
     # GET /posts.json
     def index

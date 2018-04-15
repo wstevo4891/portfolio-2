@@ -3,6 +3,8 @@ module Admin
   class ProjectsController < ApplicationController
     before_action :set_project, only: %i[show edit update destroy]
 
+    layout 'admin'
+
     # GET /projects
     # GET /projects.json
     def index

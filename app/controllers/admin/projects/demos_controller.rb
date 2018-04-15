@@ -6,6 +6,8 @@ module Admin
     class DemosController < ApplicationController
       before_action :set_demo, only: %i[show edit update destroy]
 
+      layout 'admin'
+
       # GET /projects/demos
       # GET /projects/demos.json
       def index

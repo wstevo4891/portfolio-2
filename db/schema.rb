@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20180311172309) do
     t.date "date"
     t.string "cover"
     t.text "description"
-    t.json "images", default: [], array: true
+    t.string "images", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,14 +47,14 @@ ActiveRecord::Schema.define(version: 20180311172309) do
   create_table "projects", force: :cascade do |t|
     t.string "title"
     t.string "slug"
-    t.json "skills", default: [], array: true
+    t.string "skills", default: [], array: true
     t.string "cover"
     t.string "site_link"
     t.string "repo_link"
     t.text "description"
-    t.json "highlights", default: [], array: true
-    t.json "tech_stack", default: [], array: true
-    t.json "images", default: [], array: true
+    t.string "highlights", default: [], array: true
+    t.string "tech_stack", default: [], array: true
+    t.string "images", default: [], array: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: 'home#index'
 
+  get '/admin' => 'admin#index'
+
   namespace :admin do
     resources :projects do
       resources :demos

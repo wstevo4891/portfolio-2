@@ -4,6 +4,8 @@ module Admin
     class SectionsController < ApplicationController
       before_action :set_post_section, only: %i[show edit update destroy]
 
+      layout 'admin'
+
       # GET /post/1/sections
       # GET /post/1/sections.json
       def index
