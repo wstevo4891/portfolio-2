@@ -5,6 +5,6 @@ class LabsController < ApplicationController
   end
 
   def show
-    @lab = Lab.find(params[:id])
+    @lab = Lab.find_by(slug: params[:slug])
   end
 end

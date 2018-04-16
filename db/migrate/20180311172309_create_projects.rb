@@ -15,8 +15,8 @@ class CreateProjects < ActiveRecord::Migration[5.1]
 
     create_table :project_demos do |t|
       t.belongs_to :project, index: true
-      t.string     :name
-      t.string     :image
+      t.string     :header
+      t.string     :images, array: true, default: []
       t.text       :body
 
       t.timestamps

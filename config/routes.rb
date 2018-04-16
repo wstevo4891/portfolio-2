@@ -16,6 +16,21 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :api do
+    get '/projects' => 'projects#index'
+    get '/projects/:id' => 'projects#show'
+
+    get '/posts' => 'posts#index'
+    get '/posts/:id' => 'posts#show'
+
+    get '/labs' => 'labs#index'
+    get '/labs/:id' => 'labs#show'
+
+    get '/projects/:project_id/demos' => 'demos#index'
+
+    get '/posts/:post_id/sections' => 'sections#index'
+  end
+
   get '/projects' => 'projects#index'
   get '/projects/:slug' => 'projects#show'
 
@@ -25,6 +40,7 @@ Rails.application.routes.draw do
   get '/skills' => 'skills#index'
 
   get '/labs' => 'labs#index'
+  get '/labs/:slug' => 'labs#show'
 
   get '/contact' => 'contact#index'
 end
