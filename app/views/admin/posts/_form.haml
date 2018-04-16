@@ -1,0 +1,14 @@
+= simple_form_for @post, url: url do |f|
+  = f.error_notification
+
+  = f.input :title
+
+  = f.input :slug
+
+  = f.input :date, as: :date
+
+  = f.input :cover, as: :file
+
+  = f.input :description, as: :text
+
+  = f.button :submit, 'Submit', class: 'btn btn-primary mt-4 mb-4'

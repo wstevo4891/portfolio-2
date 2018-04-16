@@ -1,0 +1,5 @@
+// Remove the dotted underline from required field asterisks in Bootstrap
+
+abbr[title] {
+  text-decoration: none;
+}
