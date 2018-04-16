@@ -14,7 +14,8 @@
 
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <%= render 'form', project_demo: @project_demo %>
+      <%= render 'form', project_demo: @project_demo,
+                         url: admin_project_demo_path(@project_demo) %>
     </div>
   </div>
 </div>

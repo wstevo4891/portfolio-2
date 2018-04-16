@@ -19,12 +19,12 @@ Rails.application.routes.draw do
   get '/projects' => 'projects#index'
   get '/projects/:slug' => 'projects#show'
 
-  get '/about' => 'about#index'
-
   get '/blog' => 'blog#index'
   get '/blog/:slug' => 'blog#show'
 
   get '/skills' => 'skills#index'
+
+  get '/labs' => 'labs#index'
 
   get '/contact' => 'contact#index'
 end

@@ -14,7 +14,8 @@
 
   <div class="row justify-content-center">
     <div class="col-lg-10">
-      <%= render 'form', post_section: @post_section %>
+      <%= render 'form', post_section: @post_section,
+                         url: admin_post_section_path(@post_section) %>
     </div>
   </div>
 </div>

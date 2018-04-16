@@ -3,6 +3,8 @@ module Admin
   class LabsController < ApplicationController
     before_action :set_lab, only: %i[show edit update destroy]
 
+    layout 'admin'
+
     # GET /admin/labs
     # GET /admin/labs.json
     def index

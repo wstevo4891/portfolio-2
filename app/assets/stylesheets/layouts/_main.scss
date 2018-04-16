@@ -22,7 +22,6 @@ main {
   flex: 1 0 auto;
   line-height: 180%;
   overflow-x: hidden;
-  background-color: $dark-bg;
 }
 
 footer {
@@ -30,8 +29,16 @@ footer {
   background-color: $dark-bg;
 }
 
-h1 {
-  color: $caca;
+main.bg-dark {
+  h1 {
+    color: $caca;
+  }
+}
+
+main.bg-light {
+  h1 {
+    color: $header-black;
+  }
 }
 
 p {

@@ -4,7 +4,8 @@
   <div class="row justify-content-start">
     <div class="col-4 mt-4 mb-4">
       <%= link_to 'Edit', edit_admin_project_path(@project), class: 'btn btn-sm btn-outline-success' %> |
-      <%= link_to 'Back to List', admin_projects_url, class: 'btn btn-secondary' %>
+      <%= link_to 'Back to List', admin_projects_path, class: 'btn btn-secondary' %> |
+      <%= link_to 'Demos', admin_project_demos_path(@project), class: 'btn btn-sm btn-outline-info' %>
     </div>
   </div>
 

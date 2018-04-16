@@ -69,7 +69,7 @@ module Admin
 
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @blog_post = ::Post.find(params[:id])
+      @post = ::Post.find(params[:id])
     end
 
     # Never trust parameters from the scary internet,

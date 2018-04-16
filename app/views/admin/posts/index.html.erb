@@ -6,7 +6,7 @@
   <table class="table">
     <thead>
       <tr>
-        <th scope="col">ID</th>
+        <th scope="col">Title</th>
         <th colspan="3">Actions</th>
       </tr>
     </thead>
@@ -14,7 +14,7 @@
     <tbody>
     <% @posts.each do |post| %>
     <tr>
-      <th scope="row"><%= post.id %></th>
+      <th scope="row"><%= post.title %></th>
       <td><%= link_to 'Show', admin_post_url(post), class: 'btn btn-sm btn-outline-info' %></td>
       <td><%= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-sm btn-outline-success' %></td>
       <td><%= link_to 'Delete', admin_post_url(post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %></td>
@@ -25,5 +25,5 @@
 
   <br>
 
-  <%= link_to 'New Blog post', new_admin_post_path, class: 'btn btn-primary mt-4 mb-4' %>
+  <%= link_to 'New Post', new_admin_post_path, class: 'btn btn-primary mt-4 mb-4' %>
 </div>
