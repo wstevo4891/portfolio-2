@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    resources :labs
-  end
   root to: 'home#index'
 
   get '/admin' => 'admin#index'
@@ -14,33 +11,32 @@ Rails.application.routes.draw do
     resources :posts do
       resources :sections
     end
+
+    resources :labs
   end
 
-  namespace :api do
-    get '/projects' => 'projects#index'
-    get '/projects/:id' => 'projects#show'
+  namespace :api, defaults: { format: :json } do
+    resources :projects, only: %i[index show] do
+      resources :demos, only: :index
+    end
 
-    get '/posts' => 'posts#index'
-    get '/posts/:id' => 'posts#show'
+    resources :posts, only: %i[index show] do
+      resources :sections, only: :index
+    end
 
-    get '/labs' => 'labs#index'
-    get '/labs/:id' => 'labs#show'
-
-    get '/projects/:project_id/demos' => 'demos#index'
-
-    get '/posts/:post_id/sections' => 'sections#index'
+    resources :labs, only: %i[index show]
   end
 
   get '/projects' => 'projects#index'
-  get '/projects/:slug' => 'projects#show'
+  get '/projects/:slug' => 'projects#show', as: :project
 
   get '/blog' => 'blog#index'
-  get '/blog/:slug' => 'blog#show'
+  get '/blog/:slug' => 'blog#show', as: :post
 
   get '/skills' => 'skills#index'
 
   get '/labs' => 'labs#index'
-  get '/labs/:slug' => 'labs#show'
+  get '/labs/:slug' => 'labs#show', as: :lab
 
   get '/contact' => 'contact#index'
 end

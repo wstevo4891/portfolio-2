@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20180415230016) do
 
   create_table "labs", force: :cascade do |t|
     t.string "title"
+    t.string "slug"
     t.string "cover"
     t.text "description"
     t.string "tech_stack", default: [], array: true
@@ -46,8 +47,8 @@ ActiveRecord::Schema.define(version: 20180415230016) do
 
   create_table "project_demos", force: :cascade do |t|
     t.bigint "project_id"
-    t.string "name"
-    t.string "image"
+    t.string "header"
+    t.string "images", default: [], array: true
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
