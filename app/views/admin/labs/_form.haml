@@ -9,6 +9,9 @@
 
   = f.input :description, as: :text
 
-  = f.input :tech_stack, label: 'Technology Stack', collection: Project::TECH_OPTIONS
+  = f.input :tech_stack,
+            label: 'Technology Stack',
+            collection: Project::TECH_OPTIONS,
+            input_html: { multiple: true }
 
   = f.button :submit, 'Submit', class: 'btn btn-primary mt-4 mb-4'

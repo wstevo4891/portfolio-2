@@ -41,6 +41,8 @@ gem 'haml'
 gem 'simple_form'
 # Use Cocoon for nested form objects
 gem 'cocoon'
+# Use Select2 library for enhanced select inputs
+gem 'select2-rails'
 
 # User carrierwave and rmagick for image uploads
 gem 'carrierwave'
