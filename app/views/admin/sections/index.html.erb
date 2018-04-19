@@ -17,9 +17,9 @@
     <% @post_sections.each do |post_section| %>
     <tr>
       <th scope="row"><%= post_section.header %></th>
-      <td><%= link_to 'Show', admin_post_section_path(post_section), class: 'btn btn-sm btn-outline-info' %></td>
-      <td><%= link_to 'Edit', edit_admin_post_section_path(post_section), class: 'btn btn-sm btn-outline-success' %></td>
-      <td><%= link_to 'Delete', admin_post_section_path(post_section), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %></td>
+      <td><%= link_to 'Show', admin_post_section_path(@post, post_section), class: 'btn btn-sm btn-outline-info' %></td>
+      <td><%= link_to 'Edit', edit_admin_post_section_path(@post, post_section), class: 'btn btn-sm btn-outline-success' %></td>
+      <td><%= link_to 'Delete', admin_post_section_path(@post, post_section), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-outline-danger' %></td>
     </tr>
     <% end %>
     </tbody>

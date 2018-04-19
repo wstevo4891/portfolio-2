@@ -3,8 +3,15 @@
 
   = f.input :header
 
-  = f.input :images, as: :file
+  .form-group
+    = f.label :images
+    = f.file_field :images, multiple: 'multiple', class: 'form-control'
 
   = f.input :body, as: :text
 
   = f.button :submit, 'Submit', class: 'btn btn-primary mt-4 mb-4'
+
+:javascript
+  $("#project_demo_images").select2({
+    theme: "bootstrap"
+  });

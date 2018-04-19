@@ -3,6 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-  $('#project_tech_stack').select2 theme: "bootstrap"
+  $('#project_tech_stack').select2 theme: 'bootstrap'
 
-  $('#lab_tech_stack').select2 theme: "bootstrap"
+  $('#lab_tech_stack').select2 theme: 'bootstrap'

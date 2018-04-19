@@ -77,9 +77,24 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+  gem "guard", require: false
+  gem "guard-minitest", require: false
+  gem "rb-fsevent", require: false
+  gem "terminal-notifier-guard", require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :test do
+  gem "connection_pool"
+  gem "launchy"
+  gem "minitest-reporters"
+  gem "mocha"
+  gem "poltergeist"
+  gem "shoulda-context"
+  gem "shoulda-matchers"
+  gem "test_after_commit"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

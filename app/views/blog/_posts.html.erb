@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+  <div class="row">
+    <div class="post">
+      <h2 class="post-title"><%= post.title %></h2>
+
+      <p class="post-date"><%= post.date %></p>
+
+      <%= image_tag post.cover, class: "img-fluid post-cover" %>
+
+      <p class="text-left post-body"><%= post.description %></p>
+
+      <%= link_to 'Read More', post, class: "site-link" %>
+    </div>
+  </div>
+<% end %>

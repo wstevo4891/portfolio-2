@@ -1,62 +1,77 @@
-// BLOG STYLES ###################
+// BLOG STYLES ======================
+
+.blog-header {
+  font-size: 5rem;
+  font-weight: 200;
+
+  span:first-child {
+    color: purple;
+  }
+  span:nth-child(2) {
+    color: yellow;
+  }
+}
 
 .blog-body {
-	margin-bottom: 4em;
+  margin-bottom: 4em;
 }
 
 .post {
-	width: 90%;
-	margin: 2em auto;
-	padding: 1em 0 4em 0;
-	border-bottom: solid 1px #949494;
-	line-height: 180%;
+  width: 90%;
+  margin: 2em auto;
+  padding: 1em 0 4em 0;
+  border-bottom: solid 1px #949494;
+  line-height: 180%;
 }
 
 .show-post {
-	@extend .post;
-	border: none;
+  @extend .post;
+  border: none;
 }
 
 .post-title {
-	font-size: 3em;
-	font-weight: 300;
+  font-size: 3em;
+  font-weight: 300;
+  color: $caca;
 }
 
 .post-date {
-	font-size: 1.5em;
-	color: #949494;
+  font-size: 1.5em;
+  color: #949494;
 }
 
 .post-cover {
-	max-height: 400px;
-	width: 690px;
-	border: solid 1px #949494;
-	@include box-shadow(3px 3px 5px #888888);
-	margin: 2em auto;
+  max-height: 400px;
+  width: 690px;
+  border: solid 1px #949494;
+  @include box-shadow(3px 3px 5px #888888);
+  margin: 2em auto;
 }
 
 .image-preview {
-	margin: 1.5em 0;
+  margin: 1.5em 0;
 }
 
 .post-body {
-	font-size: 1.5em;
-	margin: 2em 0 3em 0;
-	line-height: 180%;
+  font-size: 1.3rem;
+  font-weight: 200;
+  margin: 1rem 0 3rem 0;
+  line-height: 180%;
+  color: #c5c5c5;
 }
 
 .post-view {
-	p {
-		font-size: 1.5em;
-		margin: 1.5em 0;
-		line-height: 180%;
-	}
+  p {
+    font-size: 1.5em;
+    margin: 1.5em 0;
+    line-height: 180%;
+  }
 }
 
-// MEDIA QUERIES ##################
+// MEDIA QUERIES ======================
 
 @media screen and (min-width: 768px) {
   .post {
-  	width: 690px;
+    width: 690px;
   }
 }
