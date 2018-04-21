@@ -116,11 +116,11 @@
 
             ```ruby\n
             def filename\n
-              @order.user_id.to_s + '_' + @order.business\n
+            \_\_@order.user_id.to_s + '_' + @order.business\n
             end\n
 
             def save_path\n
-              Rails.root.join('tmp',\"#{filename}.order.pdf\")\n
+            \_\_Rails.root.join('tmp',\"#{filename}.order.pdf\")\n
             end\n
             ```\n
 
@@ -134,16 +134,16 @@
 
             ```ruby\n
             def save_as_pdf\n
-              pdf = render_to_string pdf: 'order.pdf',\n
-                                     layout: 'pdf.html.erb',\n
-                                     template: 'orders/edit.pdf.erb',\n
-                                     encoding: 'UTF-8',\n
-                                     wkhtmltopdf: 'bin/wkhtmltopdf',\n
-                                     page_height: '20in',\n
-                                     page_width: '12em'\n
-              File.open(save_path, 'wb') do |file|\n
-                file << pdf\n
-              end\n
+            \_\_pdf = render_to_string pdf: 'order.pdf',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_layout: 'pdf.html.erb',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_template: 'orders/edit.pdf.erb',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_encoding: 'UTF-8',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_wkhtmltopdf: 'bin/wkhtmltopdf',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_page_height: '20in',\n
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_page_width: '12em'\n
+            \_\_File.open(save_path, 'wb') do |file|\n
+            \_\_\_\_file << pdf\n
+            \_\_end\n
             end\n
             ```\n
 
@@ -158,11 +158,11 @@
 
             ```ruby\n
             def dropbox_upload(bool)\n
-              save_as_pdf\n
-              file = open(save_path)\n
-              client = DropboxClient.new(OAUTH2_ACCESS_TOKEN)\n
-              response = client.put_file(filename + '.order.pdf', file, overwrite=bool)\n
-              File.delete(save_path)\n
+            \_\_save_as_pdf\n
+            \_\_file = open(save_path)\n
+            \_\_client = DropboxClient.new(OAUTH2_ACCESS_TOKEN)\n
+            \_\_response = client.put_file(filename + '.order.pdf', file, overwrite=bool)\n
+            \_\_File.delete(save_path)\n
             end\n
             ```\n
 
@@ -188,31 +188,31 @@
 
             ```ruby\n
             def create\n
-              @order = @user.create_order(order_params)\n
+            \_\_@order = @user.create_order(order_params)\n
 
-              respond_to do |format|\n
-                if @order.save\n
-                  dropbox_upload(false)\n
-                  format.html { redirect_to current_user, notice: 'Your order has been processed' }\n
-                  format.json { render :show, status: :created, location: @order }\n
-                else\n
-                  format.html { render :new }\n
-                  'format.json { render json: @order.errors, status: :unprocessable_entity }'\n
-                end\n
-              end\n
+            \_\_respond_to do |format|\n
+            \_\_\_\_if @order.save\n
+            \_\_\_\_\_\_dropbox_upload(false)\n
+            \_\_\_\_\_\_format.html { redirect_to current_user, notice: 'Your order has been processed' }\n
+            \_\_\_\_\_\_format.json { render :show, status: :created, location: @order }\n
+            \_\_\_\_else\n
+            \_\_\_\_\_\_format.html { render :new }\n
+            \_\_\_\_\_\_'format.json { render json: @order.errors, status: :unprocessable_entity }'\n
+            \_\_\_\_end\n
+            \_\_end\n
             end\n
 
             def update\n
-              respond_to do |format|\n
-                if @order.update(order_params)\n
-                  dropbox_upload(true)\n
-                  'format.html { redirect_to current_user, notice: 'Order was successfully updated' }'\n
-                  'format.json { render :show, status: :ok, location: @order }'\n
-                else\n
-                  format.html { render :edit }\n
-                  'format.json { render json: @order.errors, status: :unprocessable_entity }'\n
-                end\n
-              end\n
+            \_\_respond_to do |format|\n
+            \_\_\_\_if @order.update(order_params)\n
+            \_\_\_\_\_\_dropbox_upload(true)\n
+            \_\_\_\_\_\_'format.html { redirect_to current_user, notice: 'Order was successfully updated' }'\n
+            \_\_\_\_\_\_'format.json { render :show, status: :ok, location: @order }'\n
+            \_\_\_\_else\n
+            \_\_\_\_\_\_format.html { render :edit }\n
+            \_\_\_\_\_\_'format.json { render json: @order.errors, status: :unprocessable_entity }'\n
+            \_\_\_\_end\n
+            \_\_end\n
             end\n
             ```\n
 
@@ -259,12 +259,12 @@
             to the Delete link is add `remote':' true`:\n
 
             ```ruby\n
-            <%= link_to 'Delete',"\n"
-                        genre,"\n"
-                        method: :delete,"\n"
-                        data: { confirm: 'Are you sure?' },"\n"
-                        remote: true,"\n"
-                        class: 'btn delete_genre' %>\n
+            <%= link_to 'Delete',
+            \_\_\_\_\_\_\_\_\_\_\_\_genre,
+            \_\_\_\_\_\_\_\_\_\_\_\_method: :delete,
+            \_\_\_\_\_\_\_\_\_\_\_\_data: { confirm: 'Are you sure?' },
+            \_\_\_\_\_\_\_\_\_\_\_\_remote: true,
+            \_\_\_\_\_\_\_\_\_\_\_\_class: 'btn delete_genre' %>\n
             ```\n
 
             This code tells Rails to process the delete action asynchronously. Note
@@ -273,12 +273,12 @@
 
             ```ruby\n
             def destroy\n
-              @genre.destroy\n
-              respond_to do |format|\n
-                format.html { render :index, notice':' 'Genre was deleted' }\n
-                format.json { head :no_content }\n
-                format.js\n
-              end\n
+            \_\_@genre.destroy\n
+            \_\_respond_to do |format|\n
+            \_\_\_\_format.html { render :index, notice':' 'Genre was deleted' }\n
+            \_\_\_\_format.json { head :no_content }\n
+            \_\_\_\_format.js\n
+            \_\_end\n
             end\n
             ```\n
 
@@ -289,7 +289,7 @@
 
             ```js\n
             $('.delete_genre').bind('ajax:success', function() {\n
-              $(this).closest('tr').fadeOut('slow');\n
+            \_\_$(this).closest('tr').fadeOut('slow');\n
             });\n
             ```\n
 
@@ -326,18 +326,18 @@
 
             ```ruby\n
             def create\n
-              @genre = Genre.new(genre_params)\n
+            \_\_@genre = Genre.new(genre_params)\n
 
-              respond_to do |format|\n
-                if @genre.save\n
-                  format.html { render :index, notice: 'Genre was successfully created'}\n
-                  format.json { render :index, status: :created, location: @genre}\n
-                  format.js\n
-                else\n
-                  format.html { render :new }\n
-                  format.json { render json: @genre.errors, status: :unprocessable_entity }\n
-                end\n
-              end\n
+            \_\_respond_to do |format|\n
+            \_\_\_\_if @genre.save\n
+            \_\_\_\_\_\_format.html { render :index, notice: 'Genre was successfully created'}\n
+            \_\_\_\_\_\_format.json { render :index, status: :created, location: @genre}\n
+            \_\_\_\_\_\_format.js\n
+            \_\_\_\_else\n
+            \_\_\_\_\_\_format.html { render :new }\n
+            \_\_\_\_\_\_format.json { render json: @genre.errors, status: :unprocessable_entity }\n
+            \_\_\_\_end\n
+            \_\_end\n
             end\n
             ```\n
 
@@ -348,86 +348,86 @@
             views/genres/index.html.erb\n
             ```html+erb\n
             <div class=\"container\">\n
-              <div class=\"admin-row text-center\">\n
-                <h1>Listing Genres</h1>\n
-                <br>\n
-              </div>\n
+            \_\_<div class=\"admin-row text-center\">\n
+            \_\_\_\_<h1>Listing Genres</h1>\n
+            \_\_\_\_<br>\n
+            \_\_</div>\n
 
-              <div class=\"row text-center\">\n
-                <h2 id=\"notice\"><%= notice %></h2>\n
-              </div>\n
+            \_\_<div class=\"row text-center\">\n
+            \_\_\_\_<h2 id=\"notice\"><%= notice %></h2>\n
+            \_\_</div>\n
 
-              <div class=\"row\">\n
-                <div class=\"jumbotron-index col-sm-10 col-sm-offset-1\">\n
-                  <table class=\"table table-striped\">\n
-                    <thead>\n
-                      <tr>\n
-                        <th>ID</th>\n
-                        <th>Name</th>\n
-                        <th class=\"col-sm-4\"></th>\n
-                        <th></th>\n
-                      </tr>\n
-                    </thead>\n
+            \_\_<div class=\"row\">\n
+            \_\_\_\_<div class=\"jumbotron-index col-sm-10 col-sm-offset-1\">\n
+            \_\_\_\_\_\_<table class=\"table table-striped\">\n
+            \_\_\_\_\_\_\_\_<thead>\n
+            \_\_\_\_\_\_\_\_\_\_<tr>\n
+            \_\_\_\_\_\_\_\_\_\_\_\_<th>ID</th>\n
+            \_\_\_\_\_\_\_\_\_\_\_\_<th>Name</th>\n
+            \_\_\_\_\_\_\_\_\_\_\_\_<th class=\"col-sm-4\"></th>\n
+            \_\_\_\_\_\_\_\_\_\_\_\_<th></th>\n
+            \_\_\_\_\_\_\_\_\_\_</tr>\n
+            \_\_\_\_\_\_\_\_</thead>\n
 
-                    <tbody>\n
-                      <%= render @genres %>\n
-                      <%= render 'form' %>\n
-                    </tbody>\n
-                  </table>\n
-                </div>\n
-              </div>\n
-              <br>\n
+            \_\_\_\_\_\_\_\_<tbody>\n
+            \_\_\_\_\_\_\_\_\_\_<%= render @genres %>\n
+            \_\_\_\_\_\_\_\_\_\_<%= render 'form' %>\n
+            \_\_\_\_\_\_\_\_</tbody>\n
+            \_\_\_\_\_\_</table>\n
+            \_\_\_\_</div>\n
+            \_\_</div>\n
+            \_\_<br>\n
             </div>\n
             ```\n
 
             views/genres/_genre.html.erb\n
             ```html+erb\n
             <tr id=\"genre_<%= genre.id %>\">\n
-              <td><%= genre.id %></td>\n
-              <td><%= genre.name %></td>\n
-              <td></td>\n
-              <td>\n
-                <%= link_to 'Edit',"\n"
-                            edit_genre_path(genre),"\n"
-                            remote: true,"\n"
-                            class: 'btn' %>\n
-                <%= link_to 'Delete',"\n"
-                            genre,"\n"
-                            method: :delete,"\n"
-                            data: { confirm: 'Are you sure?' },"\n"
-                            remote: true,"\n"
-                            class: 'btn delete_genre' %>\n
-              </td>\n
+            \_\_<td><%= genre.id %></td>\n
+            \_\_<td><%= genre.name %></td>\n
+            \_\_<td></td>\n
+            \_\_<td>\n
+            \_\_\_\_<%= link_to 'Edit',
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_edit_genre_path(genre),
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_remote: true,
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_class: 'btn' %>\n
+            \_\_\_\_<%= link_to 'Delete',
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_genre,
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_method: :delete,
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_data: { confirm: 'Are you sure?' },
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_remote: true,
+            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_class: 'btn delete_genre' %>\n
+            \_\_</td>\n
             </tr>\n
             ```\n
 
             views/genres/_form.html.erb\n
             ```html+erb\n
-            <%= form_for @genre,"\n"
-                          html: { class: 'form-inline new-genre' },"\n"
-                          remote: true do |f| %>\n
-              <tr class=\"new-genre\">\n
-                <td>New Genre</td>\n
-                <div class=\"form-group\">\n
-                  <td><%= f.label :name %></td>\n
-                  <td><%= f.text_field :name, class: 'form-control' %></td>\n
-                </div>\n
-                <td>\n
-                  <%= f.submit 'Add', class: 'btn' %>\n
-                </td>\n
-              </tr>\n
+            <%= form_for @genre,
+            \_\_\_\_\_\_\_\_\_\_\_\_\_html: { class: 'form-inline new-genre' },
+            \_\_\_\_\_\_\_\_\_\_\_\_\_remote: true do |f| %>\n
+            \_\_<tr class=\"new-genre\">\n
+            \_\_\_\_<td>New Genre</td>\n
+            \_\_\_\_<div class=\"form-group\">\n
+            \_\_\_\_\_\_<td><%= f.label :name %></td>\n
+            \_\_\_\_\_\_<td><%= f.text_field :name, class: 'form-control' %></td>\n
+            \_\_\_\_</div>\n
+            \_\_\_\_<td>\n
+            \_\_\_\_\_\_<%= f.submit 'Add', class: 'btn' %>\n
+            \_\_\_\_</td>\n
+            \_\_</tr>\n
 
-              <% if @genre.errors.any? %>\n
-                <div id=\"error_explanation\">\n
-                  <h2><%= pluralize(@genre.errors.count, 'error') %> prohibited this movie from being saved:</h2>\n
+            \_\_<% if @genre.errors.any? %>\n
+            \_\_\_\_<div id=\"error_explanation\">\n
+            \_\_\_\_\_\_<h2><%= pluralize(@genre.errors.count, 'error') %> prohibited this movie from being saved:</h2>\n
 
-                  <ul>\n
-                    <% @genre.errors.full_messages.each do |message| %>\n
-                      <li><%= message %></li>\n
-                    <% end %>\n
-                  </ul>\n
-                </div>\n
-              <% end %>\n
+            \_\_\_\_\_\_<ul>\n
+            \_\_\_\_\_\_\_\_<% @genre.errors.full_messages.each do |message| %>\n
+            \_\_\_\_\_\_\_\_\_\_<li><%= message %></li>\n
+            \_\_\_\_\_\_\_\_<% end %>\n
+            \_\_\_\_\_\_</ul>\n
+            \_\_\_\_</div>\n
+            \_\_<% end %>\n
             <% end %>\n
             ```\n
 
@@ -491,16 +491,16 @@
             views/genres/_edit.html.erb\n
             ```html+erb\n
             <tr id=\"edit-genre\">\n
-              <td colspan=12>\n
-                <%= form_for(@genre, html: { class: 'form-inline' }, remote: true) do |f| %>\n
-                  <div class=\"form-group col-sm-6\">\n
-                    <%= f.label 'Edit' %>\n
-                    <%= f.label :name %>\n
-                    <%= f.text_field :name, class: 'form-control', placeholder: @genre.name %>\n
-                  </div>\n
-                  <%= f.submit 'Save', class: 'btn' %>\n
-                <% end %>\n
-              </td>\n
+            \_\_<td colspan=12>\n
+            \_\_\_\_<%= form_for(@genre, html: { class: 'form-inline' }, remote: true) do |f| %>\n
+            \_\_\_\_\_\_<div class=\"form-group col-sm-6\">\n
+            \_\_\_\_\_\_\_\_<%= f.label 'Edit' %>\n
+            \_\_\_\_\_\_\_\_<%= f.label :name %>\n
+            \_\_\_\_\_\_\_\_<%= f.text_field :name, class: 'form-control', placeholder: @genre.name %>\n
+            \_\_\_\_\_\_</div>\n
+            \_\_\_\_\_\_<%= f.submit 'Save', class: 'btn' %>\n
+            \_\_\_\_<% end %>\n
+            \_\_</td>\n
             </tr>\n
             ```\n
 
@@ -547,11 +547,11 @@
 
             ```ruby\n
             group :development do\n
-              gem 'guard', require':' false\n
-              gem 'guard-livereload', require':' false\n
-              gem 'rack-livereload'\n
-              gem 'rb-fsevent', require':' false\n
-              gem 'rack-mini-profiler'\n
+            \_\_gem 'guard', require':' false\n
+            \_\_gem 'guard-livereload', require':' false\n
+            \_\_gem 'rack-livereload'\n
+            \_\_gem 'rb-fsevent', require':' false\n
+            \_\_gem 'rack-mini-profiler'\n
             end\n
             ```\n
 
