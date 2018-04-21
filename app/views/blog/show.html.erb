@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="show-post">
+      <h1 class="post-title"><%= @post.title %></h1>
+
+      <p class="post-date"><%= @post.date %></p>
+
+      <%= image_tag(@post.cover, class: "img-fluid post-cover") %>
+
+      <div class="text-left post-view">
+        <p><%= @post.description %></p>
+
+        <%= render 'sections' %>
+      </div>
+    </div>
+  </div>
+</div>

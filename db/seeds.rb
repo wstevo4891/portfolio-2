@@ -37,13 +37,21 @@ puts 'Loading posts ============================'
 posts.each do |post|
   puts "Loading post: #{post['title']}"
 
-  Post.create!(
+  new_post = Post.create!(
     title: post['title'],
     slug: post['slug'],
     date: create_date(post['date']),
     cover: seed_asset_image(post['cover']),
     description: post['description']
   )
+
+  post['sections'].each do |section|
+    new_post.sections.create!(
+      header: section['header'],
+      images: section['images'],
+      body: section['body']
+    )
+  end
 end
 
 Project.delete_all

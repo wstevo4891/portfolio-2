@@ -30,12 +30,13 @@ module Admin
     # POST /post/1/sections
     # POST /post/1/sections.json
     def create
-      @post_section = find_post.sections.build(post_section_params)
+      @post = find_post
+      @post_section = @post.sections.build(post_section_params)
 
       respond_to do |format|
         if @post_section.save
-          format.html { redirect_to admin_post_section_url(@post_section), notice: 'Section was successfully created.' }
-          format.json { render :show, status: :created, location: admin_post_section_url(@post_section) }
+          format.html { redirect_to admin_post_section_url(@post, @post_section), notice: 'Section was successfully created.' }
+          format.json { render :show, status: :created, location: admin_post_section_url(@post, @post_section) }
         else
           format.html { render :new }
           format.json { render json: @post_section.errors, status: :unprocessable_entity }
@@ -48,8 +49,8 @@ module Admin
     def update
       respond_to do |format|
         if @post_section.update(post_section_params)
-          format.html { redirect_to admin_post_section_url(@post_section), notice: 'Section was successfully updated.' }
-          format.json { render :show, status: :ok, location: admin_post_section_url(@post_section) }
+          format.html { redirect_to admin_post_section_url(@post, @post_section), notice: 'Section was successfully updated.' }
+          format.json { render :show, status: :ok, location: admin_post_section_url(@post, @post_section) }
         else
           format.html { render :edit }
           format.json { render json: @post_section.errors, status: :unprocessable_entity }
@@ -62,7 +63,7 @@ module Admin
     def destroy
       @post_section.destroy
       respond_to do |format|
-        format.html { redirect_to admin_post_sections_url(params[:post_id]), notice: 'Section was successfully destroyed.' }
+        format.html { redirect_to admin_post_sections_url(@post), notice: 'Section was successfully destroyed.' }
         format.json { head :no_content }
       end
     end
