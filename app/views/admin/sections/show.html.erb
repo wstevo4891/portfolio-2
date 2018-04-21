@@ -3,8 +3,12 @@
 <div class="container pb-5">
   <div class="row justify-content-start">
     <div class="col-4 mt-4 mb-4">
-      <%= link_to 'Edit', edit_admin_post_section_path(@post_section), class: 'btn btn-sm btn-outline-success' %> |
-      <%= link_to 'Back to List', admin_post_sections_path(@post), class: 'btn btn-secondary' %>
+      <%= link_to 'Edit',
+                  edit_admin_post_section_path(@post, @post_section),
+                  class: 'btn btn-sm btn-outline-success' %> |
+      <%= link_to 'Back to List',
+                  admin_post_sections_path(@post),
+                  class: 'btn btn-secondary' %>
     </div>
   </div>
 
@@ -35,7 +39,7 @@
     <% @post_section.attributes.each do |key, value| %>
       <tr>
         <td><%= key.upcase %></td>
-        <td><%= value %></td>
+        <td><%= key == 'body' ? markdown(value) : value %></td>
       </tr>
     <% end %>
 
