@@ -259,12 +259,7 @@
             to the Delete link is add `remote':' true`:\n
 
             ```ruby\n
-            <%= link_to 'Delete',
-            \_\_\_\_\_\_\_\_\_\_\_\_genre,
-            \_\_\_\_\_\_\_\_\_\_\_\_method: :delete,
-            \_\_\_\_\_\_\_\_\_\_\_\_data: { confirm: 'Are you sure?' },
-            \_\_\_\_\_\_\_\_\_\_\_\_remote: true,
-            \_\_\_\_\_\_\_\_\_\_\_\_class: 'btn delete_genre' %>\n
+            <%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'btn delete_genre' %>\n
             ```\n
 
             This code tells Rails to process the delete action asynchronously. Note
@@ -287,7 +282,8 @@
             and B) `format.js` tells Rails to respond to the request with
             JavaScript. That JS goes in a little file called destroy.js.erb:\n
 
-            ```js\n
+            ```java_script\n
+
             $('.delete_genre').bind('ajax:success', function() {\n
             \_\_$(this).closest('tr').fadeOut('slow');\n
             });\n
@@ -346,7 +342,7 @@
             First I want you to see the index view and the genre and form partials:\n
 
             views/genres/index.html.erb\n
-            ```html+erb\n
+            ```erb\n
             <div class=\"container\">\n
             \_\_<div class=\"admin-row text-center\">\n
             \_\_\_\_<h1>Listing Genres</h1>\n
@@ -381,31 +377,23 @@
             ```\n
 
             views/genres/_genre.html.erb\n
-            ```html+erb\n
+
+            ```erb\n
             <tr id=\"genre_<%= genre.id %>\">\n
             \_\_<td><%= genre.id %></td>\n
             \_\_<td><%= genre.name %></td>\n
             \_\_<td></td>\n
             \_\_<td>\n
-            \_\_\_\_<%= link_to 'Edit',
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_edit_genre_path(genre),
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_remote: true,
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_class: 'btn' %>\n
-            \_\_\_\_<%= link_to 'Delete',
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_genre,
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_method: :delete,
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_data: { confirm: 'Are you sure?' },
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_remote: true,
-            \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_class: 'btn delete_genre' %>\n
+            \_\_\_\_<%= link_to 'Edit', edit_genre_path(genre), remote: true, class: 'btn' %>\n
+            \_\_\_\_<%= link_to 'Delete', genre, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'btn delete_genre' %>\n
             \_\_</td>\n
             </tr>\n
             ```\n
 
             views/genres/_form.html.erb\n
-            ```html+erb\n
-            <%= form_for @genre,
-            \_\_\_\_\_\_\_\_\_\_\_\_\_html: { class: 'form-inline new-genre' },
-            \_\_\_\_\_\_\_\_\_\_\_\_\_remote: true do |f| %>\n
+
+            ```erb\n
+            <%= form_for @genre, html: { class: 'form-inline new-genre' }, remote: true do |f| %>\n
             \_\_<tr class=\"new-genre\">\n
             \_\_\_\_<td>New Genre</td>\n
             \_\_\_\_<div class=\"form-group\">\n
@@ -438,7 +426,8 @@
             does?\n
 
             views/genres/create.js.erb\n
-            ```js\n
+
+            ```java_script\n
             $('tbody tr:last').before(<%= j render(@genre) %>).fadeIn('slow');\n
             ```\n
 
@@ -462,7 +451,8 @@
             the clicked link with an edit partial:\n
 
             views/genres.edit.js.erb\n
-            ```js\n
+
+            ```java_script\n
             $('tr#<%= dom_id(@genre) %>').replaceWith('<%= j render('edit') %>');\n
             ```\n
 
@@ -489,7 +479,8 @@
             the table:\n
 
             views/genres/_edit.html.erb\n
-            ```html+erb\n
+
+            ```erb\n
             <tr id=\"edit-genre\">\n
             \_\_<td colspan=12>\n
             \_\_\_\_<%= form_for(@genre, html: { class: 'form-inline' }, remote: true) do |f| %>\n
@@ -510,7 +501,8 @@
             edit.js.erb:\n
 
             views/genres/update.js.erb\n
-            ```js\n
+
+            ```java_script\n
             $('#edit-genre').replaceWith('<%= j render(@genre) %>');\n
             ```\n
 

@@ -1,4 +1,4 @@
-<% @post.sections.each do |section| %>
+<% @post.sections.order(:id).each do |section| %>
   <h2 class="post-title"><%= section.header %></h2>
 
   <%= markdown(section.body) %>
