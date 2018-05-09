@@ -1,0 +1,61 @@
+// Styles for /projects/show page
+
+.project-title {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.project-heading {
+  color: $caca;
+}
+
+.project-description {
+  font-size: 1.3rem;
+  font-weight: 200;
+  line-height: 180%;
+  color: #c5c5c5;
+}
+
+.project-cover {
+  max-height: 500px;
+  border: solid 1px #949494;
+  margin: 2em auto;
+}
+
+.site-link {
+  display: block;
+  width: 154px;
+  height: 2.5em;
+  padding: 0.6em;
+  border: 2px solid;
+  border-radius: 40px;
+  color: #757575;
+  font-size: 1.5em;
+  transition: all 0.5s ease;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: #18bc9c;
+  }
+}
+
+.project-tech-stack {
+  padding-left: 20px;
+
+  li {
+    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: $silver;
+  }
+}
+
+//
+//
+//
+//
+//
+//
+//
+//
+//

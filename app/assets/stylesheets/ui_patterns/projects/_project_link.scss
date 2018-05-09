@@ -1,14 +1,48 @@
 // Project Link Component
 
 .project-link {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
-  a div {
+  a div:first-of-type {
     padding-top: 63%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     box-shadow: 0 0 50px rgba(0,0,0,.6) inset;
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    transition: .3s ease;
+    background-color: $darker-bg;
+    opacity: 0;
+  }
+
+  .overlay-text {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-shadow: 2px 2px 11px #000;
+    transition: .5s ease;
+    opacity: 0;
+  }
+
+  &:hover .project-overlay {
+    bottom: 0;
+    opacity: 0.7;
+  }
+
+  &:hover .overlay-text {
+    opacity: 1;
   }
 }

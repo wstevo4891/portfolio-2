@@ -270,7 +270,7 @@
             def destroy\n
             \_\_@genre.destroy\n
             \_\_respond_to do |format|\n
-            \_\_\_\_format.html { render :index, notice':' 'Genre was deleted' }\n
+            \_\_\_\_format.html { render :index, notice: 'Genre was deleted' }\n
             \_\_\_\_format.json { head :no_content }\n
             \_\_\_\_format.js\n
             \_\_end\n
@@ -283,7 +283,6 @@
             JavaScript. That JS goes in a little file called destroy.js.erb:\n
 
             ```java_script\n
-
             $('.delete_genre').bind('ajax:success', function() {\n
             \_\_$(this).closest('tr').fadeOut('slow');\n
             });\n
@@ -342,6 +341,7 @@
             First I want you to see the index view and the genre and form partials:\n
 
             views/genres/index.html.erb\n
+
             ```erb\n
             <div class=\"container\">\n
             \_\_<div class=\"admin-row text-center\">\n

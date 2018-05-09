@@ -1,0 +1,5 @@
+<% @project.demos.order(:id).each do |demo| %>
+  <h2 class="post-title"><%= demo.header %></h2>
+
+  <%= markdown(demo.body) %>
+<% end %>

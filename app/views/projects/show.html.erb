@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-10">
+      <h1 class="project-title"><%= @project.title %></h1>
+
+      <p class="project-description"><%= @project.description %></p>
+
+      <a href="<%= @project.site_link %>"
+         target="_blank"
+         class="site-link">Visit Website</a>
+
+      <%= image_tag(@project.cover, class: "img-fluid project-cover") %>
+
+      <h2 class="project-heading">Technologies</h2>
+
+      <ul class="project-tech-stack">
+        <% @project.tech_stack.each do |tech| %>
+          <li><%= tech %></li>
+        <% end %>
+      </ul>
+
+      <div class="show-post">
+        <div class="text-left post-view">
+          <%= render 'demos' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -27,6 +27,10 @@ Rails.application.routes.draw do
     resources :labs, only: %i[index show]
   end
 
+  scope 'developer-tools' do
+    get '/debug' => 'developer_tools/debug#show'
+  end
+
   get '/projects' => 'projects#index'
   get '/projects/:slug' => 'projects#show', as: :project
 

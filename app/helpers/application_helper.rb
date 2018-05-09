@@ -1,7 +1,7 @@
 module ApplicationHelper
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
-      CodeRay.scan(code, language).div
+      CodeRay.scan(code, language).div(css: :class)
     end
   end
 
@@ -17,11 +17,5 @@ module ApplicationHelper
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
-  end
-
-  def coderay(text)
-    text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      CodeRay.scan($3, $2).div(css: :class)
-    end
   end
 end

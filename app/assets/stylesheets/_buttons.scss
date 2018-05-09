@@ -9,7 +9,7 @@
   box-shadow: 4px 4px 4px #4d4d4d;
 }
 
-.site-link {
+.show-post-btn {
   padding: 0.6em;
   border: 2px solid;
   border-radius: 40px;
@@ -18,6 +18,27 @@
   color: #757575;
   font-size: 1.5em;
   transition: all 0.5s ease;
+
+  &:hover, &:focus {
+    text-decoration: none;
+    color: #18bc9c;
+  }
+}
+
+.oval-button {
+  display: block;
+  width: 154px;
+  height: 2.5em;
+  padding: 0.6em;
+  border: 2px solid;
+  border-radius: 40px;
+  color: #757575;
+  font-size: 1.5em;
+  transition: all 0.5s ease;
+
+  &.center {
+    margin: 2rem auto;
+  }
 
   &:hover, &:focus {
     text-decoration: none;

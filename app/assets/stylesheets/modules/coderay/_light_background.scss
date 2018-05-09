@@ -1,66 +1,38 @@
-// app/assets/stylesheets/modules/coderay/_manifest.scss
+// app/assets/stylesheets/modules/coderay/_light_background.scss
 
-.CodeRay {
-  font-family: 'Courier New', 'Terminal', monospace;
-  color: #E6E0DB;
-  overflow: auto;
-  font-size: 12px;
-  margin: 12px 0;
+main.bg-light {
+  .CodeRay {
+    font-family: 'Courier New', 'Terminal', monospace;
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid silver;
+    color: black;
+    overflow: auto;
+    margin-bottom: 1rem;
 
-  pre {
-    margin: 0px;
-    font-size: 1rem;
-    padding: 1rem;
-    border: 1px solid green;
-    color: #c5c5c5;
-
-    span {
-      background-color: transparent !important;
+    pre {
+      margin: 0px;
+      padding: 0.5rem;
     }
   }
-
-  // .string {
-  //   .char {
-  //     color: #b0b;
-  //   }
-  //   .content {
-  //     color: green !important;
-  //   }
-  //   .delimiter {
-  //     color: #710;
-  //   }
-  //   .modifier {
-  //     color: #E40;
-  //   }
-  // }
-}
-
-// .CodeRay {
-//   background-color: hsl(0, 0%, 95%);
-//   border: 1px solid silver;
-//   color: black;
-//   pre {
-//     margin: 0px;
-//   }
-// }
-
-span.CodeRay {
-  white-space: pre;
-  border: 0px;
-  padding: 2px;
-}
-
-table.CodeRay {
-  border-collapse: collapse;
-  width: 100%;
-  padding: 2px;
-  td {
-    padding: 2px 4px;
-    vertical-align: top;
+  
+  span.CodeRay {
+    white-space: pre;
+    border: 0px;
+    padding: 2px;
+  }
+  
+  table.CodeRay {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 2px;
+    td {
+      padding: 2px 4px;
+      vertical-align: top;
+    }
   }
 }
 
-.CodeRay {
+main.bg-light .CodeRay {
   .line-numbers {
     background-color: hsl(180, 65%, 90%);
     color: gray;
