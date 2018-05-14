@@ -2,10 +2,10 @@
 -
   title: Bolt Network
   slug: bolt-network
-  cover: bolt-network-cover.png
+  cover: bolt-network-cover.jpg
   site_link: https://bolt-network-wstevo4891.herokuapp.com/
   repo_link: https://github.com/wstevo4891/bolt-network
-  description: A Rails 4 app that mimics the UI of Netflix.
+  description: A Ruby on Rails side project where I attempt to reverse engineer the UI of Netflix.
   highlights:
     - Fast-loading sliders with CSS 3 animations
     - Admin record interface with AJAX
@@ -25,7 +25,7 @@
   cover: griffen-financial-cover.png
   site_link: https://dry-tor-4505.herokuapp.com/
   repo_link: https://github.com/wstevo4891/griffen
-  description: A Rails 4 application using CarrierWave, Cocoon, Wicked_PDF,
+  description: Ruby on Rails website using CarrierWave, Cocoon, Wicked_PDF,
                Dropbox-SDK, and Ruby-Zoho for processing application forms.
   highlights:
     - Integration with Dropbox, Zoho CMS, and Mandrill
@@ -45,7 +45,7 @@
   cover: baldwin-cover.png
   site_link: https://vast-reef-1675.herokuapp.com/
   repo_link: https://github.com/wstevo4891/atbaldwin
-  description: A Rails 4 e-commerce website using the Spree engine.
+  description: E-commerce website for a small business built in Ruby on Rails with the Spree engine.
   highlights:
     - Customized Spree application
     - Google Maps embed in footer
@@ -65,7 +65,7 @@
   cover: suggestion-box-cover.png
   site_link: https://suggestion-box-mean.herokuapp.com/
   repo_link: https://github.com/wstevo4891/suggestion_box_mean
-  description: Suggestion Box is a tool for co-workers to make anonymous
+  description: MEAN Stack app for co-workers to make anonymous
                suggestions for improving their work space, meetings, etc.
   highlights:
     - Customized Spree application

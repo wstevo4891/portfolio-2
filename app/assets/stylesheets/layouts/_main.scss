@@ -45,6 +45,19 @@ p {
   color: white;
 }
 
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  transition: .3s ease;
+
+  &:hover {
+    color: $pastel-green;
+    text-decoration: underline;
+  }
+}
+
 .page-headline {
   margin-top: 2em;
   font-weight: 300;
