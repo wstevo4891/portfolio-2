@@ -5,8 +5,7 @@ import React, { Component } from 'react';
 import Slider from './Slider';
 
 const App = (props) => (
-  <Slider></Slider>
+  <Slider />
 );
 
 export default App;
-

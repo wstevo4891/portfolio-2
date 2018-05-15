@@ -25,6 +25,8 @@ Rails.application.routes.draw do
     end
 
     resources :labs, only: %i[index show]
+
+    get '/project-images/:id' => 'project_images#show'
   end
 
   scope 'developer-tools' do

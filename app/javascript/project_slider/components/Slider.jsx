@@ -1,15 +1,15 @@
 // app/javascript/project_slider/components/slider.jsx
 
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-// import * as actions from '../actions';
+import * as actions from '../actions';
 import Slide from './Slide';
-// import Settings from './settings/index.js';
-// import ToggleSettings from './settings/toggle-settings';
-// import Dots from './dots/dots';
+import Settings from './settings/index.js';
+import ToggleSettings from './settings/toggle-settings';
+import Dots from './Dots';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
-import { settings } from 'cluster';
 
 export default class Slider extends Component {
   constructor(props) {
@@ -123,3 +123,15 @@ export default class Slider extends Component {
     );
   }
 }
+
+const mapStateToProps = ({ slider, settings }) => {
+  return {
+    images: slider.images,
+    index: slider.index,
+    translateValue: slider.translateValue,
+    showDots: settings.showDots,
+    coolButtons: settings.coolButtons
+  }
+}
+
+export default connect(mapStateToProps, actions)(Slider);
