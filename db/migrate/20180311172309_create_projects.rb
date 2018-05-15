@@ -4,9 +4,11 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string   :title
       t.string   :slug
       t.string   :cover
+      t.string   :images, array: true, default: []
       t.string   :site_link
       t.string   :repo_link
       t.text     :description
+      t.text     :summary
       t.string   :highlights, array: true, default: []
       t.string   :tech_stack, array: true, default: []
 

@@ -3,11 +3,32 @@
   title: Bolt Network
   slug: bolt-network
   cover: bolt-network-cover.jpg
+  images:
+    - bolt-network-cover.jpg
+    - bolt-network-search-bar.jpg
+    - bolt-network-hover-1.jpg
+    - bolt-network-hover-2.jpg
+    - bolt-network-the-hangover.jpg
   site_link: https://bolt-network-wstevo4891.herokuapp.com/
   repo_link: https://github.com/wstevo4891/bolt-network
-  description: A Ruby on Rails side project where I attempt to reverse engineer the UI of Netflix.
+  description: A Ruby on Rails side project where I attempt to reverse engineer
+               the UI of Netflix.
+  summary: Bolt Network is an on-going attempt to reverse engineer Netflix's
+           front end. What began as a practice project on Codecademy is now a
+           large application with 80 movie objects that uses Ruby algorithms,
+           complex JavaScript effects, and serves images from Amazon S3. My
+           additions include an animated, fixed navbar, a main slideshow scaled
+           to browser width with jQuery, an animated search form using Regexp,
+           and CSS3-animated carousel sliders built with Ruby and a modified
+           version of Unslider. Using Bootstrap, jQuery, and my own break-point
+           mixins, the views adapt to browser width to display elegantly on any
+           device.
   highlights:
-    - Fast-loading sliders with CSS 3 animations
+    - Netflix-style carousels on homepage that load with a Ruby algorithm
+    - Carousels mimic Netflix hover effects with CSS3
+    - Main slideshow adapts to browswer width using jQuery
+    - Search bar mimics Netflix animation and searches titles with Regular Expressions
+    - Navbar achieved shadowing effects of Netflix navbar
     - Admin record interface with AJAX
   tech_stack:
     - Ruby on Rails
