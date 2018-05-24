@@ -2,13 +2,21 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './components/App';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 
+import reducers from './reducers';
+import reduxThunk from 'redux-thunk';
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(reducers);
 
-const project_slider = document.querySelector('#project_slider');
-console.log(project_slider);
+import Slider from './components/Slider';
 
-ReactDOM.render(
-    <App />,
-    project_slider
-);
+const projectSlider = document.querySelector('#project_slider');
+
+ReactDOM.render (
+  <Provider store={store}>
+    <Slider projectId={projectSlider.dataset.project} />
+  </Provider>,
+  projectSlider
+)

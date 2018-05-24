@@ -1,11 +1,11 @@
 // app/javascript/project_slider/components/LeftArrow.jsx
 
-import React, { Component } from 'react';
+import React from 'react';
 
-const LeftArrow = (props) => {
+const LeftArrow = ({ prevSlide, coolButtons }) => {
   return (
-    <div onClick={props.previousSlide} className='backArrow'>
-      <i className='fa fa-arrow-left fa-2x' aria-hidden='true'></i>
+    <div className={coolButtons ? 'left-arrow cool-buttons' : 'left-arrow'} onClick={prevSlide}>
+      <i className='fa fa-angle-left fa-3x' aria-hidden='true'></i>
     </div>
   );
 }

@@ -9,15 +9,28 @@
          target="_blank"
          class="site-link">Visit Website</a>
 
-      <%= image_tag(@project.cover, class: "img-fluid project-cover") %>
+      <%#= image_tag(@project.cover, class: "img-fluid project-cover") %>
 
-      <h2 class="project-heading">Technologies</h2>
+      <div id="project_slider" data-project="<%= @project.id %>">
+      <%= javascript_pack_tag 'project_slider' %>
 
-      <ul class="project-tech-stack">
-        <% @project.tech_stack.each do |tech| %>
-          <li><%= tech %></li>
-        <% end %>
-      </ul>
+      <div class="project-section">
+        <h2 class="project-heading">About This Project</h2>
+        <hr class="project-hr">
+
+        <p class="project-description"><%= @project.summary %></p>
+      </div>
+
+      <div class="project-section">
+        <h2 class="project-heading">Technologies</h2>
+        <hr class="project-hr">
+
+        <ul class="project-tech-stack">
+          <% @project.tech_stack.each do |tech| %>
+            <li><%= tech %></li>
+          <% end %>
+        </ul>
+      </div>
 
       <div class="show-post">
         <div class="text-left post-view">

@@ -59,9 +59,11 @@ ActiveRecord::Schema.define(version: 20180415230016) do
     t.string "title"
     t.string "slug"
     t.string "cover"
+    t.string "images", default: [], array: true
     t.string "site_link"
     t.string "repo_link"
     t.text "description"
+    t.text "summary"
     t.string "highlights", default: [], array: true
     t.string "tech_stack", default: [], array: true
     t.datetime "created_at", null: false

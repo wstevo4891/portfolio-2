@@ -44,7 +44,7 @@ gem 'cocoon'
 # Use Select2 library for enhanced select inputs
 gem 'select2-rails'
 
-# User carrierwave and rmagick for image uploads
+# Use carrierwave and rmagick for image uploads
 gem 'carrierwave'
 gem 'rmagick'
 # Use fog for AWS support

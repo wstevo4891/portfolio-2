@@ -7,20 +7,18 @@ import {
   TOGGLE_AUTOPLAY
 } from './types';
 
-
 /* Thunks */
 export function getSliderImages(projectId) {
   return async (dispatch) => {
     try {
-      let res = await axios.get(`/api/project-images/${projectId}`)
-      dispatch(getImagesSuccess(res.data)) // res.data will be an [] of images
+      let res = await axios.get(`/api/project-images/${projectId}`);
+      dispatch(getImagesSuccess(res.data)); // res.data will be an [] of images
     }
     catch(e) {
-      console.error('Fetching images failed: ' + e)
+      console.error('Fetching images failed: ' + e);
     }
   }
 }
-
 
 /* Action Creators */
 export function getImagesSuccess(images) {

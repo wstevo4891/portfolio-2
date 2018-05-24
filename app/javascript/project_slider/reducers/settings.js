@@ -2,7 +2,7 @@ import { TOGGLE_SETTING } from '../actions/types'
 
 const initialState = {
   showDots: true,
-  coolButtons: false
+  coolButtons: true
 }
 
 export default function(state = initialState, action) {

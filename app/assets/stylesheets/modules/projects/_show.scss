@@ -5,15 +5,25 @@
   font-weight: 600;
 }
 
+.project-section {
+  margin-bottom: 3rem;
+}
+
 .project-heading {
   color: $caca;
 }
 
+.project-hr {
+  width: 50%;
+  border-top: solid 1px #cacaca;
+  margin-left: 0;
+}
+
 .project-description {
   font-size: 1.3rem;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 180%;
-  color: #c5c5c5;
+  color: #a0a0a0;
 }
 
 .project-cover {
@@ -45,16 +55,6 @@
     padding: 0.5rem 0;
     font-size: 1.3rem;
     font-weight: 300;
-    color: $silver;
+    color: #a0a0a0;
   }
 }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//

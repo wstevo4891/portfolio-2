@@ -2,16 +2,17 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import 'babel-polyfill';
 
 import * as actions from '../actions';
 import Slide from './Slide';
-import Settings from './settings/index.js';
-import ToggleSettings from './settings/toggle-settings';
+import Settings from '../settings/index.js';
+import ToggleSettings from '../settings/toggle-settings';
 import Dots from './Dots';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
 
-export default class Slider extends Component {
+class Slider extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +21,7 @@ export default class Slider extends Component {
     };
   }
 
-  componentDidMount = () => this.props.getSliderImages()
+  componentDidMount = () => this.props.getSliderImages(this.props.projectId);
 
   componentDidUpdate = (prevProps, prevState) => {
     const { autoplay } = this.state;
@@ -30,13 +31,16 @@ export default class Slider extends Component {
                 this.nextSlide()
               }, 3000);
       this.setState({ interval: x });
+    } else if (!autoplay && prevState.autoplay !== autoplay) {
+      let x = window.clearInterval(this.state.interval);
+      this.setState({ interval: x });
     }
   }
 
   renderSlides = () => {
-    this.props.images.map((curr, i) =>
-      <Slide key={i} image={this.props.images[i]} />
-    );
+    this.props.images.map((image, i) =>
+      <Slide key={i} image={image} />
+    )
   }
 
   toggleSettings = () => {
@@ -47,7 +51,7 @@ export default class Slider extends Component {
     this.setState({ autoplay: !this.state.autoplay });
   }
 
-  previousSlide() {
+  previousSlide = () => {
     const { images, index, translateValue, setTranslateValue, setIndex } = this.props;
     if (index === 0) return;
 
@@ -55,9 +59,9 @@ export default class Slider extends Component {
     setIndex(index - 1);
   }
 
-  nextSlide() {
+  nextSlide = () => {
     const { images, index, translateValue, setTranslateValue, setIndex } = this.props;
-    if (index === image.length - 1) {
+    if (index === images.length - 1) {
       setTranslateValue(0);
       return setIndex(0);
     }
@@ -91,22 +95,30 @@ export default class Slider extends Component {
     } = this.props;
 
     return (
-      <div className='project-slider'>
-        <Settings
-          visible={settingsVisible}
-          toggleAutoplay={this.toggleAutoplay}
-          autoplay={autoplay}
-        />
+      <div className='slider-container'>
+        <div className='slider'>
+          <Settings
+            visible={settingsVisible}
+            toggleAutoplay={this.toggleAutoplay}
+            autoplay={autoplay}
+          />
 
-        <ToggleSettings visible={settingsVisible} toggle={this.toggleSettings} />
+          {/* <ToggleSettings visible={settingsVisible} toggle={this.toggleSettings} /> */}
 
-        <div
-          className='slider-wrapper'
-          style={{
-            transform: `translateX(${translateValue}px)`,
-            transition: 'transform ease-out 0.45s'
-          }}>
-          { this.renderSlides }
+          <div
+            className='slider-wrapper'
+            style={{
+              transform: `translateX(${translateValue}px)`,
+              transition: 'transform ease-out 0.45s'
+            }}>
+            { this.props.images.map((image, i) =>
+              <Slide key={i} image={image} />
+            ) }
+          </div>
+
+          <LeftArrow prevSlide={this.previousSlide} coolButtons={coolButtons} />
+
+          <RightArrow nextSlide={this.nextSlide} coolButtons={coolButtons} />
         </div>
 
         <Dots
@@ -115,10 +127,6 @@ export default class Slider extends Component {
           images={images}
           dotClick={this.handleDotClick}
         />
-
-        <LeftArrow previousSlide={this.previousSlide} />
-
-        <RightArrow nextSlide={this.nextSlide} />
       </div>
     );
   }

@@ -1,11 +1,11 @@
 // app/javascript/project_slider/components/RightArrow.jsx
 
-import React, { Component } from 'react';
+import React from 'react';
 
-const RightArrow = (props) => {
+const RightArrow = ({ nextSlide, coolButtons }) => {
   return (
-    <div onClick={props.nextSlide} className='nextArrow'>
-      <i className='fa fa-arrow-right fa-2x' aria-hidden='true'></i>
+    <div className={coolButtons ? 'right-arrow cool-buttons' : 'right-arrow'} onClick={nextSlide}>
+      <i className='fa fa-angle-right fa-3x' aria-hidden='true'></i>
     </div>
   );
 }

@@ -65,9 +65,11 @@ projects.each do |project|
     title: project['title'],
     slug: project['slug'],
     cover: seed_asset_image(project['cover']),
+    images: project['images'],
     site_link: project['site_link'],
     repo_link: project['repo_link'],
     description: project['description'],
+    summary: project['summary'],
     highlights: project['highlights'],
     tech_stack: project['tech_stack']
   )

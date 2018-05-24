@@ -44,10 +44,12 @@
   title: Griffen Financial
   slug: griffen-financial
   cover: griffen-financial-cover.png
+  images:
   site_link: https://dry-tor-4505.herokuapp.com/
   repo_link: https://github.com/wstevo4891/griffen
   description: Ruby on Rails website using CarrierWave, Cocoon, Wicked_PDF,
                Dropbox-SDK, and Ruby-Zoho for processing application forms.
+  summary:
   highlights:
     - Integration with Dropbox, Zoho CMS, and Mandrill
     - Bootstrap forms with add-and-remove nested models
@@ -64,9 +66,12 @@
   title: At Home with Baldwin Interiors
   slug: baldwin-interiors
   cover: baldwin-cover.png
+  images:
   site_link: https://vast-reef-1675.herokuapp.com/
   repo_link: https://github.com/wstevo4891/atbaldwin
-  description: E-commerce website for a small business built in Ruby on Rails with the Spree engine.
+  description: E-commerce website for a small business built in Ruby on Rails
+               with the Spree engine.
+  summary:
   highlights:
     - Customized Spree application
     - Google Maps embed in footer
@@ -84,10 +89,12 @@
   title: Suggestion Box
   slug: suggestion-box
   cover: suggestion-box-cover.png
+  images:
   site_link: https://suggestion-box-mean.herokuapp.com/
   repo_link: https://github.com/wstevo4891/suggestion_box_mean
   description: MEAN Stack app for co-workers to make anonymous
                suggestions for improving their work space, meetings, etc.
+  summary:
   highlights:
     - Customized Spree application
     - Google Maps embed in footer
