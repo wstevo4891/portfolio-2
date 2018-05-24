@@ -3,19 +3,23 @@
 /* FOOTER STYLES
 ====================================*/
 
-// footer {
-//   padding-top: 1em;
-//   background-color: $jade;
-//   border-top: solid 2px $mine-shaft;
-//   color: $mine-shaft;
-//   height: 140px;
-//   z-index: 0;
-//
-//   p {
-//     position: relative;
-//     top: 2.5em;
-//   }
-// }
+footer {
+  padding: 3rem 0 80px;
+
+  h4 {
+    color: $caca;
+  }
+
+  p {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+  }
+
+  a {
+    color: $caca;
+    font-weight: bold;
+  }
+}
 
 .social-media {
   width: 15em;

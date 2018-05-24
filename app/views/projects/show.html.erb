@@ -9,8 +9,6 @@
          target="_blank"
          class="site-link">Visit Website</a>
 
-      <%#= image_tag(@project.cover, class: "img-fluid project-cover") %>
-
       <div id="project_slider" data-project="<%= @project.id %>">
       <%= javascript_pack_tag 'project_slider' %>
 
@@ -30,12 +28,6 @@
             <li><%= tech %></li>
           <% end %>
         </ul>
-      </div>
-
-      <div class="show-post">
-        <div class="text-left post-view">
-          <%= render 'demos' %>
-        </div>
       </div>
     </div>
   </div>
