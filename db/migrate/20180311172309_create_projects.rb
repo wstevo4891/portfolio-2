@@ -1,6 +1,8 @@
 class CreateProjects < ActiveRecord::Migration[5.1]
   def change
     create_table :projects do |t|
+      t.string   :meta_title
+      t.string   :meta_description
       t.string   :title
       t.string   :slug
       t.string   :cover

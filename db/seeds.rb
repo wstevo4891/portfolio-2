@@ -62,6 +62,8 @@ projects.each do |project|
   puts "Loading project: #{project['title']}"
 
   Project.create!(
+    meta_title: project['meta_title'],
+    meta_description: project['meta_description'],
     title: project['title'],
     slug: project['slug'],
     cover: seed_asset_image(project['cover']),

@@ -1,5 +1,9 @@
 ---
 -
+  meta_title: Bolt Network | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Web Front-End & Back-End Software Developer and Ruby on
+                    Rails Specialist Portfolio. Check out my Rails Projects,
+                    React.JS Components, and Github Repositories.
   title: Bolt Network
   slug: bolt-network
   cover: bolt-network-cover.jpg
@@ -41,6 +45,10 @@
     - Bootstrap 3
     - Heroku
 -
+  meta_title: Griffen Financial | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Web Front-End & Back-End Software Developer and Ruby on
+                    Rails Specialist Portfolio. Check out my Rails Projects,
+                    React.JS Components, and Github Repositories.
   title: Griffen Financial
   slug: griffen-financial
   cover: griffen-financial-cover.png
@@ -63,6 +71,10 @@
     - Ruby APIs
     - Heroku
 -
+  meta_title: At Home with Baldwin Interiors | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Web Front-End & Back-End Software Developer and Ruby on
+                    Rails Specialist Portfolio. Check out my Rails Projects,
+                    React.JS Components, and Github Repositories.
   title: At Home with Baldwin Interiors
   slug: baldwin-interiors
   cover: baldwin-cover.png
@@ -86,6 +98,10 @@
     - Bootstrap 3
     - Heroku
 -
+  meta_title: Suggestion Box | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Web Front-End & Back-End Software Developer and Ruby on
+                    Rails Specialist Portfolio. Check out my Rails Projects,
+                    React.JS Components, and Github Repositories.
   title: Suggestion Box
   slug: suggestion-box
   cover: suggestion-box-cover.png

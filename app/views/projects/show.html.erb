@@ -5,9 +5,17 @@
 
       <p class="project-description"><%= @project.description %></p>
 
-      <a href="<%= @project.site_link %>"
-         target="_blank"
-         class="site-link">Visit Website</a>
+      <div class="row">
+        <div class="col-12">
+          <a href="<%= @project.site_link %>"
+             target="_blank"
+             class="site-link">Visit Website</a>
+
+          <a href="<%= @project.repo_link %>"
+             target="_blank"
+             class="repo-link">View Repo</a>
+        </div>
+      </div>
 
       <div id="project_slider" data-project="<%= @project.id %>">
       <%= javascript_pack_tag 'project_slider' %>
