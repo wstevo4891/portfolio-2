@@ -1,5 +1,50 @@
 ---
 -
+  meta_title: RAM Mounts | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Web Front-End & Back-End Software Developer and Ruby on
+                    Rails Specialist Portfolio. Check out my Rails Projects,
+                    React.JS Components, and Github Repositories.
+  title: RAM Mounts
+  slug: ram-mounts
+  cover: rammounts-cover.jpg
+  images:
+    - rammounts-cover.jpg
+    - rammounts-home-tiles.jpg
+    - rammounts-home-footer.jpg
+    - rammounts-motorcycle-wizard-initial.jpg
+    - rammounts-motorcycle-wizard-complete.jpg
+  site_link: https://bolt-network-wstevo4891.herokuapp.com/
+  repo_link: https://github.com/wstevo4891/bolt-network
+  description: E-Commerce website for RAM Mounts, a manufacturer of durable
+               mounting systems for mobile devices. Built in Ruby on Rails
+               with Elasticsearch.
+  summary:
+    - While working on this legacy codebase I went from building new
+      webpages and implementing Bootstrap styling to constructing full-stack
+      systems for heavily AJAX-ed features, creating new Elasticsearch indices,
+      integrating a module of forms with Jira, slimming down fat models and
+      controllers with refactoring techniques and service objects, and
+      rebuilding our most prominent JavaScript SPA's in ReactJS.
+
+    - I am currently building multiple JSON API's that fetch data with
+      Elasticsearch queries and a CRUD interface for a new set of landing pages
+      to be stored in Elasticsearch.
+  highlights:
+    - Multi-step mount builders (wizards) running on AJAX and Elasticsearch
+    - Complex system of service objects for main search algorithm
+    - SPA for purchasing mounting systems to mount ELD devices
+    - Mobile-friendly webpages across the board with Bootstrap 3 Grids
+  tech_stack:
+    - Ruby on Rails
+    - Elasticsearch
+    - SQL Server
+    - jQuery
+    - HTML5
+    - CSS3
+    - SASS
+    - Bootstrap 3
+    - Vagrant
+-
   meta_title: Bolt Network | Full Stack Rails Developer | Eric Stephenson
   meta_description: Web Front-End & Back-End Software Developer and Ruby on
                     Rails Specialist Portfolio. Check out my Rails Projects,
@@ -17,16 +62,17 @@
   repo_link: https://github.com/wstevo4891/bolt-network
   description: A Ruby on Rails side project where I attempt to reverse engineer
                the UI of Netflix.
-  summary: Bolt Network is an on-going attempt to reverse engineer Netflix's
-           front end. What began as a practice project on Codecademy is now a
-           large application with 80 movie objects that uses Ruby algorithms,
-           complex JavaScript effects, and serves images from Amazon S3. My
-           additions include an animated, fixed navbar, a main slideshow scaled
-           to browser width with jQuery, an animated search form using Regexp,
-           and CSS3-animated carousel sliders built with Ruby and a modified
-           version of Unslider. Using Bootstrap, jQuery, and my own break-point
-           mixins, the views adapt to browser width to display elegantly on any
-           device.
+  summary: 
+    - Bolt Network is an on-going attempt to reverse engineer Netflix's
+      front end. What began as a practice project on Codecademy is now a
+      large application with 80 movie objects that uses Ruby algorithms,
+      complex JavaScript effects, and serves images from Amazon S3. My
+      additions include an animated, fixed navbar, a main slideshow scaled
+      to browser width with jQuery, an animated search form using Regexp,
+      and CSS3-animated carousel sliders built with Ruby and a modified
+      version of Unslider. Using Bootstrap, jQuery, and my own break-point
+      mixins, the views adapt to browser width to display elegantly on any
+      device.
   highlights:
     - Netflix-style carousels on homepage that load with a Ruby algorithm
     - Carousels mimic Netflix hover effects with CSS3
@@ -51,8 +97,13 @@
                     React.JS Components, and Github Repositories.
   title: Griffen Financial
   slug: griffen-financial
-  cover: griffen-financial-cover.png
+  cover: griffen-financial-cover.jpg
   images:
+    - griffen-financial-cover.jpg
+    - griffen-financial-merchant-application.jpg
+    - griffen-financial-products-page.jpg
+    - griffen-financial-product.jpg
+
   site_link: https://dry-tor-4505.herokuapp.com/
   repo_link: https://github.com/wstevo4891/griffen
   description: Ruby on Rails website using CarrierWave, Cocoon, Wicked_PDF,
@@ -77,8 +128,12 @@
                     React.JS Components, and Github Repositories.
   title: At Home with Baldwin Interiors
   slug: baldwin-interiors
-  cover: baldwin-cover.png
+  cover: baldwin-interiors-cover.jpg
   images:
+    - baldwin-interiors-cover.jpg
+    - baldwin-interiors-interiors.jpg
+    - baldwin-interiors-footer.jpg
+    - baldwin-interiors-glassware.jpg
   site_link: https://vast-reef-1675.herokuapp.com/
   repo_link: https://github.com/wstevo4891/atbaldwin
   description: E-commerce website for a small business built in Ruby on Rails
@@ -104,8 +159,12 @@
                     React.JS Components, and Github Repositories.
   title: Suggestion Box
   slug: suggestion-box
-  cover: suggestion-box-cover.png
+  cover: suggestion-box-home.jpg
   images:
+    - suggestion-box-home.jpg
+    - suggestion-box-form.jpg
+    - suggestion-box-comments.jpg
+    - suggestion-box-laffy-taffy.jpg
   site_link: https://suggestion-box-mean.herokuapp.com/
   repo_link: https://github.com/wstevo4891/suggestion_box_mean
   description: MEAN Stack app for co-workers to make anonymous

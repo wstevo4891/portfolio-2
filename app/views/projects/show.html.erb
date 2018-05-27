@@ -24,7 +24,9 @@
         <h2 class="project-heading">About This Project</h2>
         <hr class="project-hr">
 
-        <p class="project-description"><%= @project.summary %></p>
+        <% @project.summary.each do |text| %>
+          <p class="project-description"><%= text %></p>
+        <% end %>
       </div>
 
       <div class="project-section">
