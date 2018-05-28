@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20180415230016) do
   create_table "post_sections", force: :cascade do |t|
     t.bigint "post_id"
     t.string "header"
-    t.string "images", default: [], array: true
+    t.string "image"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20180415230016) do
   end
 
   create_table "posts", force: :cascade do |t|
+    t.string "meta_title"
+    t.string "meta_description"
     t.string "title"
     t.string "slug"
     t.date "date"
@@ -48,7 +50,7 @@ ActiveRecord::Schema.define(version: 20180415230016) do
   create_table "project_demos", force: :cascade do |t|
     t.bigint "project_id"
     t.string "header"
-    t.string "images", default: [], array: true
+    t.string "image"
     t.text "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

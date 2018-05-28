@@ -10,6 +10,14 @@ def seed_asset_image(image)
   File.open(Rails.root + "app/assets/images/#{image}")
 end
 
+def seed_image_array(arr)
+  img_array = []
+  arr.each do |img|
+    img_array.push File.open(Rails.root + "app/assets/images/#{img}")
+  end
+  img_array
+end
+
 def load_yaml(file)
   YAML.load_file(Rails.root.join("db/yaml_data/#{file}.yml"))
 end
@@ -38,6 +46,8 @@ posts.each do |post|
   puts "Loading post: #{post['title']}"
 
   new_post = Post.create!(
+    meta_title: post['meta_title'],
+    meta_description: post['meta_description'],
     title: post['title'],
     slug: post['slug'],
     date: create_date(post['date']),
@@ -48,7 +58,7 @@ posts.each do |post|
   post['sections'].each do |section|
     new_post.sections.create!(
       header: section['header'],
-      images: section['images'],
+      image: section['image'],
       body: section['body']
     )
   end
@@ -67,7 +77,7 @@ projects.each do |project|
     title: project['title'],
     slug: project['slug'],
     cover: seed_asset_image(project['cover']),
-    images: project['images'],
+    images: seed_image_array(project['images']),
     site_link: project['site_link'],
     repo_link: project['repo_link'],
     description: project['description'],

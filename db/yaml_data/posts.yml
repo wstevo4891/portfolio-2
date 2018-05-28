@@ -1,5 +1,9 @@
 ---
 -
+  meta_title: PDF Uploads with Dropbox API | Full Stack Rails Developer | Eric Stephenson
+  meta_description: How to integrate a Rails application with the Dropbox API.
+                    Upload PDF files to Dropbox with Dropbox-SDK, Wicked PDF,
+                    and WKHTMLTOPDF.
   title: PDF Uploads with Dropbox API
   slug: pdf-uploads-with-dropbox-api
   cover: dropbox-api.png
@@ -19,7 +23,7 @@
   sections:
     -
       header: Gems
-      images: ''
+      image: ''
       body: "To implement the same functionality, you'll need to add these gems
             to your Gemfile:\n
 
@@ -30,7 +34,7 @@
             ```"
     -
       header: Getting Started
-      images: ''
+      image: ''
       body: "First, you'll need a Dropbox account.\n
 
             **Step 1.** Get a Dropbox account.\n
@@ -71,7 +75,7 @@
             $ heroku config:set DROPBOX_SECRET_KEY='...'"
 
     - header: Configuring Your PDFs
-      images: ''
+      image: ''
       body: "**Step 7.** Let's say you have a model called Order, and you want
             a PDF of each completed order sent to your Dropbox account. For this
             to work, you'll need a pdf layout and a pdf view of your form, AND
@@ -109,7 +113,7 @@
             name of the form."
     -
       header: Controller Logic
-      images: ''
+      image: ''
       body: "**Step 8.** Lastly, we need to write some controller methods. In
             Orders_Controller.rb you'll start with a few methods that save the
             order as a PDF in the /tmp directory.\n
@@ -153,7 +157,7 @@
             play around with these to get them just right)."
     -
       header: Using The Dropbox API
-      images: ''
+      image: ''
       body: "Now we're ready for a method that uses the Dropbox API:\n
 
             ```ruby\n
@@ -224,6 +228,8 @@
 
             Thanks for reading and happy uploading!"
 -
+  meta_title: A Fully AJAX-ified Index Table | Full Stack Rails Developer | Eric Stephenson
+  meta_description: How to use AJAX to update an index table in Ruby on Rails.
   title: A Fully AJAX-ified Index Table
   slug: fully-ajaxified-index-table
   cover: ajax-blue.jpg
@@ -241,7 +247,7 @@
   sections:
     -
       header: Why AJAX Helps
-      images: ''
+      image: ''
       body: In *Agile Web Development with Rails 4*, Sam Ruby says AJAX is for
             "making browsers suck less." Long before I decided to take Bolt Network
             from its humble roots as a twenty-minute exercise on Codecademy, I
@@ -254,7 +260,7 @@
             if that delete button doesn't use AJAX.
     -
       header: Make Your Delete Button Remote
-      images: ''
+      image: ''
       body: "Fortunately, running the destroy action through AJAX is easy. All you do
             to the Delete link is add `remote':' true`:\n
 
@@ -312,7 +318,7 @@
             the yellow-brick REST path, safe within its rubber wall confines."
     -
       header: AJAX-ify The Create Method
-      images: ''
+      image: ''
       body: "Right! With all that out of the way, let me show you how to AJAX-ify all
             the CRUD actions in a table. Let's start by jumping to the polar
             opposite of Destroy: Create!\n
@@ -441,7 +447,7 @@
             a new genre entry."
     -
       header: AJAX-ifying Edit and Update
-      images: ''
+      image: ''
       body: "Now we leave the safe confines of Create and Destroy, and enter the far
             trickier territory of Edit and Update. I wanted the edit action to be an
             inline form, like create, that appears when you click on the \"Edit\"
@@ -514,6 +520,9 @@
 
             Happy Ajaxing!"
 -
+  meta_title: A Fully AJAX-ified Index Table | Full Stack Rails Developer | Eric Stephenson
+  meta_description: Set up a Ruby on Rails application to use live reloading in
+                    development with Guard LiveReload.
   title: Live-reloading with Guard LiveReload
   slug: live-reloading-with-guard-live-reload
   cover: livereload-with-rails-4.jpg
@@ -533,7 +542,7 @@
   sections:
     -
       header: Gems
-      images: ''
+      image: ''
       body: "\"So...,\" you might ask, \"what gems am I installing?\" Glad you
             asked, reader.\n
 
@@ -560,7 +569,7 @@
             loading process. It is something you should always have in development."
     -
       header: Making a Guardfile
-      images: ''
+      image: ''
       body: "Right, so you bundle installed the gems, now you need to create a
             Guardfile:\n
 
@@ -577,7 +586,7 @@
             detect it and tell the browser to reload."
     -
       header: Setting Up Your CSS
-      images: ''
+      image: ''
       body: "Of course, it depends on how you've set up the asset pipeline to handle
             your CSS.  In my case, I'm being old school and using
             \"//= require foobar\" for each stylesheet in application.css. There's a
@@ -587,7 +596,7 @@
             to reload that one file instead of the entire compiled stylesheet."
     -
       header: Chrome LiveReload
-      images: ''
+      image: ''
       body: "One last thing: I have not been able to make this work on Chrome without
             the [Chrome LiveReload Extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en).
             When it's installed, you'll see the LiveReload icon in the upper-right

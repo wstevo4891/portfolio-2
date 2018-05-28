@@ -4,7 +4,7 @@ import React from 'react';
 
 const Slide = ({ image }) => {
   const background = {
-    backgroundImage: `url(/assets/${image})`,
+    backgroundImage: `url(${image.url})`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 60%'

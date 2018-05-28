@@ -2,6 +2,7 @@ module Admin
   # Controller for admin projects CRUD
   class ProjectsController < ApplicationController
     before_action :set_project, only: %i[show edit update destroy]
+    # before_save :remove_blank_summaries
 
     layout 'admin'
 
@@ -78,7 +79,11 @@ module Admin
       params.require(:project)
             .permit :meta_title, :meta_description, :title, :slug, :cover,
                     :site_link, :repo_link, :description, :highlights,
-                    :tech_stack, { images: [] }, summary: []
+                    :tech_stack, images: [], summary: []
+    end
+
+    def remove_blank_summaries
+      summary.reject!(&:blank?)
     end
   end
 end

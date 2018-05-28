@@ -1,9 +1,7 @@
 ---
 -
   meta_title: RAM Mounts | Full Stack Rails Developer | Eric Stephenson
-  meta_description: Web Front-End & Back-End Software Developer and Ruby on
-                    Rails Specialist Portfolio. Check out my Rails Projects,
-                    React.JS Components, and Github Repositories.
+  meta_description: E-Commerce Ruby on Rails application for RAM Mounts.
   title: RAM Mounts
   slug: ram-mounts
   cover: rammounts-cover.jpg
@@ -46,9 +44,8 @@
     - Vagrant
 -
   meta_title: Bolt Network | Full Stack Rails Developer | Eric Stephenson
-  meta_description: Web Front-End & Back-End Software Developer and Ruby on
-                    Rails Specialist Portfolio. Check out my Rails Projects,
-                    React.JS Components, and Github Repositories.
+  meta_description: Reverse engineer Netflix UI effects in a Ruby on Rails
+                    application using jQuery, CSS3, and Amazon S3.
   title: Bolt Network
   slug: bolt-network
   cover: bolt-network-cover.jpg
@@ -64,8 +61,8 @@
                the UI of Netflix.
   summary:
     - Bolt Network is an on-going attempt to reverse engineer Netflix's
-      front end. What began as a practice project on Codecademy is now a
-      large application with 80 movie objects that uses Ruby algorithms,
+      UI effects. What began as a practice project on Codecademy is now a
+      large application with 80 movie records that uses Ruby algorithms,
       complex JavaScript effects, and serves images from Amazon S3. My
       additions include an animated, fixed navbar, a main slideshow scaled
       to browser width with jQuery, an animated search form using Regexp,
@@ -92,9 +89,9 @@
     - Heroku
 -
   meta_title: Griffen Financial | Full Stack Rails Developer | Eric Stephenson
-  meta_description: Web Front-End & Back-End Software Developer and Ruby on
-                    Rails Specialist Portfolio. Check out my Rails Projects,
-                    React.JS Components, and Github Repositories.
+  meta_description: Ruby on Rails application showcasing integration with
+                    Dropbox and Zoho API's, PDF form uploads to Dropbox using
+                    Wicked PDF, and dynamic nested forms with Cocoon.
   title: Griffen Financial
   slug: griffen-financial
   cover: griffen-financial-cover.jpg
@@ -137,9 +134,8 @@
     - Heroku
 -
   meta_title: At Home with Baldwin Interiors | Full Stack Rails Developer | Eric Stephenson
-  meta_description: Web Front-End & Back-End Software Developer and Ruby on
-                    Rails Specialist Portfolio. Check out my Rails Projects,
-                    React.JS Components, and Github Repositories.
+  meta_description: Ruby on Rails e-commerce application for a small business
+                    built with the Spree engine.
   title: At Home with Baldwin Interiors
   slug: baldwin-interiors
   cover: baldwin-interiors-cover.jpg
@@ -173,10 +169,9 @@
     - Bootstrap 3
     - Heroku
 -
-  meta_title: Suggestion Box | Full Stack Rails Developer | Eric Stephenson
-  meta_description: Web Front-End & Back-End Software Developer and Ruby on
-                    Rails Specialist Portfolio. Check out my Rails Projects,
-                    React.JS Components, and Github Repositories.
+  meta_title: Suggestion Box | Full Stack Ruby and JavaScript Developer | Eric Stephenson
+  meta_description: Simple MEAN Stack application for creating and upvoting
+                    suggestions for the workplace.
   title: Suggestion Box
   slug: suggestion-box
   cover: suggestion-box-home.jpg

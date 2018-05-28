@@ -16,8 +16,8 @@
 
   = f.input :description, as: :text
 
-  = f.input :summary, as: :array
-  %button.add-summary-field.btn.btn-success Add Paragraph
+  = f.input :summary, as: :array, input_html: { class: 'form-control', rows: '8' }
+  %button.add-summary-field.btn.btn-success.mt-4.mb-4 Add Paragraph
 
   = f.input :highlights
 

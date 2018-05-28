@@ -10,6 +10,7 @@ $(document).ready ->
 
   addSummaryField: (event) ->
     event.preventDefault()
+    event.stopPropagation()
     $lastSummaryField = $('input[name="project[summarys][]"]:last-of-type').clone()
     $lastSummaryField.val("")
     $(".input.project_summaries").append($lastSummaryField)
