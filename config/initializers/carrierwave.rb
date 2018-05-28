@@ -21,9 +21,6 @@ end
 
 # Store uploads in spec/support/uploads in test environment
 if Rails.env.test?
-
-  ImageUploader
-
   CarrierWave::Uploader::Base.descendants.each do |klass|
     next if klass.anonymous?
     klass.class_eval do

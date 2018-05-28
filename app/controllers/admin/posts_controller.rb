@@ -76,7 +76,8 @@ module Admin
     # only allow the white list through.
     def post_params
       params.require(:post)
-            .permit :title, :slug, :date, :cover, :description, :images
+            .permit :meta_title, :meta_description, :title, :slug, :date,
+                    :cover, :description
     end
   end
 end

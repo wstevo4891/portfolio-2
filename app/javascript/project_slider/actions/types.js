@@ -5,3 +5,4 @@ export const SET_INDEX = 'set_index'
 
 /* Settings */
 export const TOGGLE_SETTING = 'toggle_setting'
+export const TOGGLE_AUTOPLAY = 'toggle_autoplay'

@@ -1,3 +1,6 @@
+<% provide(:title, @project.meta_title) %>
+<% provide(:description, @project.meta_description) %>
+
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-sm-10">
@@ -11,9 +14,11 @@
              target="_blank"
              class="site-link">Visit Website</a>
 
-          <a href="<%= @project.repo_link %>"
-             target="_blank"
-             class="repo-link">View Repo</a>
+          <% unless @project.repo_link.blank? %>
+            <a href="<%= @project.repo_link %>"
+               target="_blank"
+               class="repo-link">View Repo</a>
+          <% end %>
         </div>
       </div>
 

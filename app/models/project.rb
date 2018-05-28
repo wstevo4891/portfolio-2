@@ -9,7 +9,9 @@ class Project < ApplicationRecord
 
   accepts_nested_attributes_for :demos
 
-  mount_uploader :cover, ImageUploader
+  mount_uploader :cover, CoverUploader
+
+  mount_uploaders :images, ImageUploader
 
   validates :title, :cover, :description, presence: true
 end

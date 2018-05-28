@@ -74,7 +74,7 @@ class Slider extends Component {
     if (i === index) return;
 
     if (i > index) {
-      setTranslateValue(-(i * this.slideWidth())); 
+      setTranslateValue(-(i * this.slideWidth()));
     } else {
       setTranslateValue(translateValue + ((index - i) * (this.slideWidth())));
     }
@@ -103,7 +103,7 @@ class Slider extends Component {
             autoplay={autoplay}
           />
 
-          {/* <ToggleSettings visible={settingsVisible} toggle={this.toggleSettings} /> */}
+        {/* <ToggleSettings visible={settingsVisible} toggle={/*this.toggleSettings*/} /> */}
 
           <div
             className='slider-wrapper'

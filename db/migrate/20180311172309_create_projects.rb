@@ -6,7 +6,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
       t.string   :title
       t.string   :slug
       t.string   :cover
-      t.string   :images, array: true, default: []
+      t.json     :images
       t.string   :site_link
       t.string   :repo_link
       t.text     :description
@@ -20,7 +20,7 @@ class CreateProjects < ActiveRecord::Migration[5.1]
     create_table :project_demos do |t|
       t.belongs_to :project, index: true
       t.string     :header
-      t.string     :images, array: true, default: []
+      t.string     :image
       t.text       :body
 
       t.timestamps

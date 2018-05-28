@@ -72,11 +72,13 @@ module Admin
       @project = ::Project.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet,
+    # only allow the white list through.
     def project_params
       params.require(:project)
-            .permit :title, :slug, :cover, :site_link, :repo_link,
-                    :description, :highlights, :tech_stack, :images
+            .permit :meta_title, :meta_description, :title, :slug, :cover,
+                    :site_link, :repo_link, :description, :highlights,
+                    :tech_stack, { images: [] }, summary: []
     end
   end
 end

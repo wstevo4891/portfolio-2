@@ -5,13 +5,19 @@
 
   = f.input :slug
 
-  = f.input :cover, as: :file
+  = f.input :cover, as: :file, input_html: { class: 'form-control' }
+
+  = f.input :images, as: :file,
+            input_html: { class: 'form-control', multiple: true }
 
   = f.input :site_link, label: 'Link to Website'
 
   = f.input :repo_link, label: 'Link to Github Repo'
 
   = f.input :description, as: :text
+
+  = f.input :summary, as: :array
+  %button.add-summary-field.btn.btn-success Add Paragraph
 
   = f.input :highlights
 

@@ -13,8 +13,8 @@
     - rammounts-home-footer.jpg
     - rammounts-motorcycle-wizard-initial.jpg
     - rammounts-motorcycle-wizard-complete.jpg
-  site_link: https://bolt-network-wstevo4891.herokuapp.com/
-  repo_link: https://github.com/wstevo4891/bolt-network
+  site_link: https://rammount.com/
+  repo_link:
   description: E-Commerce website for RAM Mounts, a manufacturer of durable
                mounting systems for mobile devices. Built in Ruby on Rails
                with Elasticsearch.
@@ -62,7 +62,7 @@
   repo_link: https://github.com/wstevo4891/bolt-network
   description: A Ruby on Rails side project where I attempt to reverse engineer
                the UI of Netflix.
-  summary: 
+  summary:
     - Bolt Network is an on-going attempt to reverse engineer Netflix's
       front end. What began as a practice project on Codecademy is now a
       large application with 80 movie objects that uses Ruby algorithms,
@@ -109,6 +109,20 @@
   description: Ruby on Rails website using CarrierWave, Cocoon, Wicked_PDF,
                Dropbox-SDK, and Ruby-Zoho for processing application forms.
   summary:
+    - Griffen Financial is a startup that aims to provide specialized
+      credit/debit card readers for legal marijuana merchants. The client wanted
+      a site to advertise the devices and provide online application forms for
+      buyers. Another request was that the site be integrated with Dropbox, Zoho
+      CMS, and Mandrill.
+
+    - I began this project in March, 2015, and launched a demo version online
+      after four weeks. In the succeeding months, I completed the integrations
+      requested and implemented multiple ruby gems for increased functionality.
+      I used Carrierwave for image uploads on the forms and Cocoon for a form
+      that needed image uploads from each shareholder or partner of the
+      customer's business. In July 2015, the project was put on hold
+      indefinitely. I have since rebuilt Griffen Financial with cleaner code and
+      host a demo on Heroku.
   highlights:
     - Integration with Dropbox, Zoho CMS, and Mandrill
     - Bootstrap forms with add-and-remove nested models
@@ -139,6 +153,12 @@
   description: E-commerce website for a small business built in Ruby on Rails
                with the Spree engine.
   summary:
+    - Ruby on Rails e-commerce website for a home furnishings and gift store in
+      Columbus, GA. The client wanted a site to promote the store, show its
+      location, and offer its products for sale online. With the Spree
+      e-commerce engine, the site has user-friendly navigation to all products,
+      organized by categories, and a backend that allows the client to add
+      products to the database with ease.
   highlights:
     - Customized Spree application
     - Google Maps embed in footer
@@ -170,6 +190,18 @@
   description: MEAN Stack app for co-workers to make anonymous
                suggestions for improving their work space, meetings, etc.
   summary:
+    - Suggestion Box is a tool for co-workers to make anonymous suggestions for
+      improving their work space, meetings, etc. After building this simple app
+      for an AngularJS course final project, I went a step further and put it on
+      a full MEAN stack. I installed node modules with NPM, added a Node/Express
+      backend, connected a Mongo Database through Mongoose, and handled
+      dependencies with Bower.
+
+    - "I built this app in a week after finishing the Codecademy AngularJS
+      course. Suggestion Box consists of two pages: a home page for posting
+      suggestions and upvoting them, and a suggestion page for commenting on
+      individual suggestions and upvoting the comments. Using Bootstrap for
+      structure and responsive views, the app displays well on any device."
   highlights:
     - Customized Spree application
     - Google Maps embed in footer

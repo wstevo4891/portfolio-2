@@ -6,7 +6,7 @@ class Post < ApplicationRecord
                                 reject_if: :all_blank,
                                 allow_destroy: true
 
-  mount_uploader :cover, ImageUploader
+  mount_uploader :cover, CoverUploader
 
   validates :title, :cover, :date, :description, presence: true
 end
