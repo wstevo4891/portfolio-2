@@ -9,9 +9,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="/skills">SKILLS</a>
-      </li>
+      <% if Rails.env.development? %>
+        <li class="nav-item">
+          <a class="nav-link" href="/skills">SKILLS</a>
+        </li>
+      <% end %>
 
       <li class="nav-item">
         <a class="nav-link" href="/projects">PROJECTS</a>
@@ -21,9 +23,11 @@
         <a class="nav-link" href="/blog">BLOG</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="/labs">LABS</a>
-      </li>
+      <% if Rails.env.development? %>
+        <li class="nav-item">
+          <a class="nav-link" href="/labs">LABS</a>
+        </li>
+      <% end %>
 
       <li class="nav-item">
         <a class="nav-link" href="/contact">CONTACT</a>

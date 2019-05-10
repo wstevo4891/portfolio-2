@@ -44,5 +44,7 @@ Rails.application.routes.draw do
   get '/labs' => 'labs#index'
   get '/labs/:slug' => 'labs#show', as: :lab
 
-  get '/contact' => 'contact#index'
+  get '/contact' => 'contact#new'
+  get '/contact/thank-you' => 'contact#show'
+  post '/contact/send' => 'contact#create'
 end

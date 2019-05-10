@@ -1,0 +1,16 @@
+#new_contact {
+  label.control-label {
+    color: #a0a0a0;
+    font-size: 18px;
+  }
+
+  input.form-control, textarea.form-control {
+    background-color: #343a40;
+
+    &:focus {
+      color: #a0a0a0;
+      border-color: $jade;
+      box-shadow: 0 0 0 0.2rem $jade;
+    }
+  }
+}

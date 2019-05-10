@@ -103,8 +103,6 @@ class Slider extends Component {
             autoplay={autoplay}
           />
 
-        {/* <ToggleSettings visible={settingsVisible} toggle={/*this.toggleSettings*/} /> */}
-
           <div
             className='slider-wrapper'
             style={{
